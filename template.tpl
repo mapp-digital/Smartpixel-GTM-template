@@ -9,16 +9,20 @@ Google may provide), as modified from time to time.
 ___INFO___
 
 {
-  "displayName": "Webtrekk Smartpixel - Tracking Configuration",
-  "categories": ["ANALYTICS", "CONVERSIONS", "MARKETING"],
-  "description": "Initialize Webtrekk tracking and configure tracking requests.",
+  "displayName": "Mapp Intelligence Smartpixel - Tracking Configuration",
+  "description": "Initialize tracking and configure tracking requests.",
+  "categories": [
+    "ANALYTICS",
+    "CONVERSIONS",
+    "MARKETING"
+  ],
   "securityGroups": [],
   "id": "cvt_temp_public_id",
   "type": "TAG",
   "version": 1,
   "brand": {
-    "thumbnail": "data:image/png;base64,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\u003d",
-    "displayName": "Benutzerdefinierte Vorlage",
+    "thumbnail": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH5AEeCS4g8x/oQwAAA5VJREFUeNrt202ITlEcx/EvY4zXGc3kZcq7aRaMmQ0RG5IdsZhkko1iYTYWSmFHKWVnM8pCFhIpFkRCISmR98iQ12EGmUGMl+exmP9C03PPvc+de45n8vvUrafufe75n/O/555z7u2CiIiIiIiIiIiIiIiIiIiIiIiIiEhmhgQqpwaYBFQDFQX254GvwHugw377UAHUAuOBygL1zwPfgA/AW6B7sCdgFbASaACmAxMdx/4EXgPtwA3gKHArozjqgRZgITALmAyMjDg2B7wBngO3gVPA2cHWs9YBr4Beu6qK3XLAD+AaMG8AcdQBZ+xcv1PG0Qs8AZYMhttZgzVaPuPtIDCtiFiqgV0e4jhsvafkDAV22JWW97Q9BzYkiGURcNVjHO+ATaWWgGMeK/z31gvsc4xdzUBXgDhy1iv/uTLgfMpK/E55X84De6zX/W15yjEnZ3HkUvz3XIE4gs2CRgNHbJaTxCfgPvCi3xSvyqaoM4Amx+ykv73ANvu91AbbioT/vWOzrQ6bcv4ERgET7B5fb7O2JE4Da4HPoa/+PQmvki6gFZhjg2PUhVBjx+ywyiQ59xZrrKS3nf3AfFsLDI+IZYxdDCuAKwnP2xa68RcmDOwQUJ7i/FXAyQS3qE7rTXFx3Lb5fxqrbWEYV0ZzqMYflqDSncCaDMraWkRvKLT9Ag5kEMcE4FKCMW1SiATsjgnkI7Agw/JW2viRZnDdnGEcVcCFmDJPhHim8zQmiPkeyt1Y5BojZ2NU1o9aymJ6f9cAV+6xWoDvjgBaPZZ9vIgE3Bzo9NChMabsnb4aoNzup1EFX7bxwZexwJeECZjredXf5ij7osWauWrgnqPg9QHGn+0JGv94gDiWAT2O1Xqtj0KnxjynqQ9Q8doECWgIEEelTW2jYlhaTHcq5pl6lNfA4wAV/0Lfu4IoD+xi8K0HeOjYv9hHApoc+x4FWoP0WiNHuWWzpRCuO/bN9pEA1/P49kCV/mW9LcpLe64TgqvOk30kYLhjX3egSudiHnr12DEhfHLsG+cjAfmYhiFgEkohDld7DPGRALIo0HNZIePIbFEhSoASIEqAEiBKgBIgSoASIEqAEiBKgBIgSoASIEqAEiAlkgDXxw/DAsZcnnJfyLYbkfQkxbzCawRmUvi9613gWaCK19H3IUe+QF3u0/dJaQhT6Psct1Bi3lEi35CJiIiIiIiIiIiIiIiIiIiIiIiIyH/lDzziTp+TUYygAAAAAElFTkSuQmCC",
+    "displayName": "Mapp Digital",
     "id": "brand_dummy"
   },
   "containerContexts": [
@@ -33,7 +37,7 @@ ___TEMPLATE_PARAMETERS___
   {
     "type": "LABEL",
     "name": "tagExplanation",
-    "displayName": "You can send data for a page or an event. \u003cbr\u003e Please note that Webtrekk needs an initial page request in every session."
+    "displayName": "You can send data for a page or an event. \u003cbr\u003e Please note that Mapp Intelligence needs an initial page request in every session."
   },
   {
     "type": "RADIO",
@@ -52,7 +56,7 @@ ___TEMPLATE_PARAMETERS___
     "simpleValueType": true
   },
   {
-    "help": "Enter your Webtrekk Track ID here. If you want to send the same information to several accounts, simply enter the corresponding Track IDs separated by a comma. You find it at \"Webtrekk Q3 \u003e  Configuration \u003e System Configuration \u003e Data Collection \u003e Your Track ID\"",
+    "help": "Enter your Mapp Intelligence Track ID here. If you want to send the same information to several accounts, simply enter the corresponding Track IDs separated by a comma. You find it at \"Mapp Intelligence Q3 \u003e  Configuration \u003e System Configuration \u003e Data Collection \u003e Your Track ID\"",
     "displayName": "Track ID",
     "simpleValueType": true,
     "name": "initTrackId",
@@ -67,7 +71,7 @@ ___TEMPLATE_PARAMETERS___
     "valueHint": "01234567891234 (String)"
   },
   {
-    "help": "Enter the domain to which you want the data to be sent. If you are using a Webtrekk Track Domain, you should have received an email containing this Domain, among other information regarding the setup.",
+    "help": "Enter the domain to which you want the data to be sent. If you are using a Mapp Intelligence Track Domain, you should have received an email containing this Domain, among other information regarding the setup.",
     "displayName": "Track Domain",
     "simpleValueType": true,
     "name": "initTrackDomain",
@@ -79,14 +83,14 @@ ___TEMPLATE_PARAMETERS___
         "type": "EQUALS"
       }
     ],
-    "valueHint": "track.webtrekk.com (String)"
+    "valueHint": "track.mapp.com (String)"
   },
   {
     "type": "TEXT",
     "name": "initDomain",
     "displayName": "Manual exclusion of referrers",
     "simpleValueType": true,
-    "help": "By default, the domain that includes the Smart Pixel is not counted as a referrer in Webtrekk. Here you can override this setting. \u003cbr\u003e\nAdd all (sub)domains that should be excluded from referrer analyses (e.g. your own domain, payment providers etc.). \u003cbr\u003e\nEnter these (sub)domains as comma-separated list of domains and subdomains without http(s).You can use wildcards (*) to include subdomains.",
+    "help": "By default, the domain that includes the Smart Pixel is not counted as a referrer in Mapp Intelligence. Here you can override this setting. \u003cbr\u003e\nAdd all (sub)domains that should be excluded from referrer analyses (e.g. your own domain, payment providers etc.). \u003cbr\u003e\nEnter these (sub)domains as comma-separated list of domains and subdomains without http(s).You can use wildcards (*) to include subdomains.",
     "enablingConditions": [
       {
         "paramName": "requestType",
@@ -173,7 +177,7 @@ ___TEMPLATE_PARAMETERS___
           }
         ],
         "newRowButtonText": "Add event parameter",
-        "help": "Event parameters can be used to log additional information about an event (e.g. Click area, Link type). \u003cbr\u003e\nEach parameter has to be configured in Webtrekk Q3 in order to be tracked. Please enter the ID as given in your configuration in the first column."
+        "help": "Event parameters can be used to log additional information about an event (e.g. Click area, Link type). \u003cbr\u003e\nEach parameter has to be configured in Mapp Intelligence Q3 in order to be tracked. Please enter the ID as given in your configuration in the first column."
       }
     ],
     "enablingConditions": [
@@ -193,7 +197,7 @@ ___TEMPLATE_PARAMETERS___
       {
         "type": "LABEL",
         "name": "extensionActionDescription",
-        "displayName": "HTML links can be tracked automatically. \u003cbr\u003e\u003cbr\u003eHint: If links are added to the page after this tag is executed, you can mark them by adding another instance of the Webtrekk Smartpixel tag and the \u0027event\u0027 setting. You\u0027ll find a \u0027reload\u0027 checkbox here then. \u003cbr\u003e",
+        "displayName": "HTML links can be tracked automatically. \u003cbr\u003e\u003cbr\u003eHint: If links are added to the page after this tag is executed, you can mark them by adding another instance of the Mapp Intelligence Smartpixel tag and the \u0027event\u0027 setting. You\u0027ll find a \u0027reload\u0027 checkbox here then. \u003cbr\u003e",
         "enablingConditions": [
           {
             "paramName": "requestType",
@@ -512,7 +516,7 @@ ___TEMPLATE_PARAMETERS___
         "newRowButtonText": "Add predefined page parameter"
       },
       {
-        "help": "Page parameters must be configured in the Webtrekk tool before being able to track them via the pixel (Configuration \u003e Custom Parameters \u003e Page Parameters). The ID and data type (text/number) are defined for each parameter during account setup, among other things.\nThe ID to be entered here must be the one given in the account configuration.",
+        "help": "Page parameters must be configured in the Mapp Intelligence tool before being able to track them via the pixel (Configuration \u003e Custom Parameters \u003e Page Parameters). The ID and data type (text/number) are defined for each parameter during account setup, among other things.\nThe ID to be entered here must be the one given in the account configuration.",
         "displayName": "Page parameter",
         "name": "pageParameter",
         "simpleTableColumns": [
@@ -542,7 +546,7 @@ ___TEMPLATE_PARAMETERS___
         "newRowButtonText": "Add page parameter"
       },
       {
-        "help": "Page related categories are called content groups. They must be configured in the Webtrekk tool before being able to track them. \u003cbr\u003e Content group parameters should not exceed a length of 255 characters. \u003cbr\u003e\u003cbr\u003e\nThe ID to be entered here must be the one given in the configuration.",
+        "help": "Page related categories are called content groups. They must be configured in the Mapp Intelligence tool before being able to track them. \u003cbr\u003e Content group parameters should not exceed a length of 255 characters. \u003cbr\u003e\u003cbr\u003e\nThe ID to be entered here must be the one given in the configuration.",
         "displayName": "Content group",
         "name": "pageCategory",
         "simpleTableColumns": [
@@ -612,7 +616,7 @@ ___TEMPLATE_PARAMETERS___
             "name": "orderId",
             "displayName": "Order ID",
             "simpleValueType": true,
-            "help": "The order ID property contains a unique number identifying the order. Use of this setting ensures that no orders are counted twice. If no order ID is given, Webtrekk will create one automatically.",
+            "help": "The order ID property contains a unique number identifying the order. Use of this setting ensures that no orders are counted twice. If no order ID is given, Mapp Intelligence will create one automatically.",
             "valueHint": "M-12345 (String)"
           },
           {
@@ -628,7 +632,7 @@ ___TEMPLATE_PARAMETERS___
             "name": "orderCurrency",
             "displayName": "Currency",
             "simpleValueType": true,
-            "help": "Please enter the currency that was used for the order here. This is necessary in case you can choose between different currencies on your website and want to track order values in Webtrekk.",
+            "help": "Please enter the currency that was used for the order here. This is necessary in case you can choose between different currencies on your website and want to track order values in Mapp Intelligence.",
             "valueHint": "EUR (ISO 4217)"
           },
           {
@@ -899,7 +903,7 @@ ___TEMPLATE_PARAMETERS___
             "valueHint": "String"
           }
         ],
-        "help": "Session parameters always refer to one complete session (visit). \u003cbr\u003eIf the value for the parameter is transmitted during a visit several times, only the first or last value is evaluated, based on the configuration in your Webtrekk account. \u003cbr\u003e\u003cbr\u003ePlease indicate the ID of the parameter as configured in your Webtrekk account in the first column.",
+        "help": "Session parameters always refer to one complete session (visit). \u003cbr\u003eIf the value for the parameter is transmitted during a visit several times, only the first or last value is evaluated, based on the configuration in your Mapp Intelligence account. \u003cbr\u003e\u003cbr\u003ePlease indicate the ID of the parameter as configured in your Mapp Intelligence account in the first column.",
         "newRowButtonText": "Add session parameter"
       }
     ]
@@ -923,7 +927,7 @@ ___TEMPLATE_PARAMETERS___
         "name": "overwriteCustomerValidation",
         "checkboxText": "Safe predefined URM categories without validation",
         "simpleValueType": true,
-        "help": "Activate this checkbox to automatically override the customer data saved in the Webtrekk Database when sending predefined parameters. If you leave it unchecked, make sure to map \u0027true\u0027 to the respective validation field.",
+        "help": "Activate this checkbox to automatically override the customer data saved in the Mapp Intelligence Database when sending predefined parameters. If you leave it unchecked, make sure to map \u0027true\u0027 to the respective validation field.",
         "defaultValue": true
       },
       {
@@ -1007,7 +1011,7 @@ ___TEMPLATE_PARAMETERS___
             "valueHint": "String"
           }
         ],
-        "help": "\u003cstrong\u003eemail:\u003c/strong\u003e Use this to transmit the e-mail address of a user. Will not be hashed by the pixel. (String)\u003cbr\u003e \u003cstrong\u003eemailRID:\u003c/strong\u003e Use this to transmit the e-mail receiver ID of the user. (String)\u003cbr\u003e \u003cstrong\u003eemailOptin:\u003c/strong\u003e Use this to transmit the e-mail optin status of the user. (Boolean)\u003cbr\u003e \u003cstrong\u003efirstName:\u003c/strong\u003e Use this to transmit the first name of the user. (String)\u003cbr\u003e \u003cstrong\u003elastName:\u003c/strong\u003e Use this to transmit the last name of the user. (String)\u003cbr\u003e \u003cstrong\u003etelephone:\u003c/strong\u003e Use this to transmit the telephone number of the user. (String)\u003cbr\u003e \u003cstrong\u003egender:\u003c/strong\u003e Use this to transmit the gender of the user (1 \u003d male | 2 \u003d female). (Number)\u003cbr\u003e \u003cstrong\u003ebirthday:\u003c/strong\u003e Use this to transmit the user\u0027s date of birth (YYYYMMDD). (String)\u003cbr\u003e \u003cstrong\u003ecountry:\u003c/strong\u003e Use this to transmit the country of the user. (String)\u003cbr\u003e \u003cstrong\u003ecity:\u003c/strong\u003e Use this to transmit the city of the user. (String)\u003cbr\u003e \u003cstrong\u003estreet:\u003c/strong\u003e Use this to transmit the street of the user. (String)\u003cbr\u003e \u003cstrong\u003estreetNumber:\u003c/strong\u003e Use this to transmit the street number of the user. (String)\u003cbr\u003e\u003cbr\u003e\nYou have to configured this Categories in Webtrekk.",
+        "help": "\u003cstrong\u003eemail:\u003c/strong\u003e Use this to transmit the e-mail address of a user. Will not be hashed by the pixel. (String)\u003cbr\u003e \u003cstrong\u003eemailRID:\u003c/strong\u003e Use this to transmit the e-mail receiver ID of the user. (String)\u003cbr\u003e \u003cstrong\u003eemailOptin:\u003c/strong\u003e Use this to transmit the e-mail optin status of the user. (Boolean)\u003cbr\u003e \u003cstrong\u003efirstName:\u003c/strong\u003e Use this to transmit the first name of the user. (String)\u003cbr\u003e \u003cstrong\u003elastName:\u003c/strong\u003e Use this to transmit the last name of the user. (String)\u003cbr\u003e \u003cstrong\u003etelephone:\u003c/strong\u003e Use this to transmit the telephone number of the user. (String)\u003cbr\u003e \u003cstrong\u003egender:\u003c/strong\u003e Use this to transmit the gender of the user (1 \u003d male | 2 \u003d female). (Number)\u003cbr\u003e \u003cstrong\u003ebirthday:\u003c/strong\u003e Use this to transmit the user\u0027s date of birth (YYYYMMDD). (String)\u003cbr\u003e \u003cstrong\u003ecountry:\u003c/strong\u003e Use this to transmit the country of the user. (String)\u003cbr\u003e \u003cstrong\u003ecity:\u003c/strong\u003e Use this to transmit the city of the user. (String)\u003cbr\u003e \u003cstrong\u003estreet:\u003c/strong\u003e Use this to transmit the street of the user. (String)\u003cbr\u003e \u003cstrong\u003estreetNumber:\u003c/strong\u003e Use this to transmit the street number of the user. (String)\u003cbr\u003e\u003cbr\u003e\nYou have to configured this Categories in Mapp Intelligence.",
         "newRowButtonText": "Add predefined URM category"
       },
       {
@@ -1110,7 +1114,7 @@ ___TEMPLATE_PARAMETERS___
       {
         "type": "LABEL",
         "name": "extensionFormManualTrackingHelp",
-        "displayName": "When deactivating \u0027Automatic form recognition\u0027, please remember to add form elements to Webtrekk by executing \u0027wtSmart.extension.form.add(formElement)\u0027 in your code.",
+        "displayName": "When deactivating \u0027Automatic form recognition\u0027, please remember to add form elements to Mapp Intelligence by executing \u0027wtSmart.extension.form.add(formElement)\u0027 in your code.",
         "enablingConditions": [
           {
             "paramName": "extensionFormAutomatic",
@@ -1183,7 +1187,7 @@ ___TEMPLATE_PARAMETERS___
         "name": "extensionFormFullContent",
         "displayName": "Plain text for specific form fields",
         "simpleValueType": true,
-        "help": "With the form field types \"select-multiple\", \"select-one\", \"checkbox\" and \"radio\", the precise values can be transmitted. \u003cbr\u003eWith all other form field types, only the field status is sent to Webtrekk, i.e. only \"filled_out\" is sent for a completed form field and not the content. \u003cbr\u003eHowever, if you would like to evaluate the form field content as clear text, add the corresponding form fields to the configuration property \"fullContent\".\u003cbr\u003e\nPlease enter as comma-separated string.",
+        "help": "With the form field types \"select-multiple\", \"select-one\", \"checkbox\" and \"radio\", the precise values can be transmitted. \u003cbr\u003eWith all other form field types, only the field status is sent to Mapp Intelligence, i.e. only \"filled_out\" is sent for a completed form field and not the content. \u003cbr\u003eHowever, if you would like to evaluate the form field content as clear text, add the corresponding form fields to the configuration property \"fullContent\".\u003cbr\u003e\nPlease enter as comma-separated string.",
         "enablingConditions": [
           {
             "paramName": "extensionFormActivate",
@@ -1207,7 +1211,7 @@ ___TEMPLATE_PARAMETERS___
         "name": "extensionFormFieldValue",
         "displayName": "Alternativ attribute for form field value",
         "simpleValueType": true,
-        "help": "For form fields of the type \"radio,\" \"select-one,\" \"select-multiple\" and \"checkbox\", the value of the \"value\" attribute will be sent to Webtrekk by default. Optionally, an alternative value attribute could be used.\u003cbr\u003eIf the alternative attribute is set, the value of all of the above-mentioned field types in the alternative attribute will be sent to Webtrekk. This is helpful if you are for example sending an ID as the standard value because this would be hard to understand.",
+        "help": "For form fields of the type \"radio,\" \"select-one,\" \"select-multiple\" and \"checkbox\", the value of the \"value\" attribute will be sent to Mapp Intelligence by default. Optionally, an alternative value attribute could be used.\u003cbr\u003eIf the alternative attribute is set, the value of all of the above-mentioned field types in the alternative attribute will be sent to Mapp Intelligence. This is helpful if you are for example sending an ID as the standard value because this would be hard to understand.",
         "enablingConditions": [
           {
             "paramName": "extensionFormActivate",
@@ -1362,28 +1366,28 @@ ___TEMPLATE_PARAMETERS___
         ]
       },
       {
-        "help": "Check this box if you want to add the \"secure\" flag to all clientside Webtrekk cookies. Please be aware that your entire website needs to be accessible via HTTPS if you want to use this feature.",
+        "help": "Check this box if you want to add the \"secure\" flag to all clientside Mapp Intelligence cookies. Please be aware that your entire website needs to be accessible via HTTPS if you want to use this feature.",
         "simpleValueType": true,
         "name": "advancedSecureCookie",
         "checkboxText": "Secure Cookie",
         "type": "CHECKBOX"
       },
       {
-        "help": "Check this box if you want to obfuscate requests to make it harder for ad blockers to detect Webtrekk track requests.",
+        "help": "Check this box if you want to obfuscate requests to make it harder for ad blockers to detect Mapp Intelligence track requests.",
         "simpleValueType": true,
         "name": "advancedRequestObfuscation",
         "checkboxText": "Request Obfuscation",
         "type": "CHECKBOX"
       },
       {
-        "help": "Check this box if you want to use the old Webtrekk Ever ID. Highly recommended if you used Webtrek pixel V3, V4 or V5 / TI before.",
+        "help": "Check this box if you want to use the old Mapp Intelligence Ever ID. Highly recommended if you used Webtrek pixel V3, V4 or V5 / TI before.",
         "simpleValueType": true,
         "name": "advancedForceOldEverId",
         "checkboxText": "Force Old EverID",
         "type": "CHECKBOX"
       },
       {
-        "help": "Check this box if you want to send data tracked in a WebView of an app via the SDK. Please note that activating this feature can lead to a slightly increased security risk when exchanging data. This is because the pixel creates a data exchange to your Webtrekk SDK (which you use to track the app) and does not send the data directly to your Webtrekk account.",
+        "help": "Check this box if you want to send data tracked in a WebView of an app via the SDK. Please note that activating this feature can lead to a slightly increased security risk when exchanging data. This is because the pixel creates a data exchange to your Mapp Intelligence SDK (which you use to track the app) and does not send the data directly to your Mapp Intelligence account.",
         "simpleValueType": true,
         "name": "advancedSendViaSDK",
         "checkboxText": "Send Via SDK",
@@ -1395,7 +1399,7 @@ ___TEMPLATE_PARAMETERS___
         "displayName": "Opt-out cookie name",
         "simpleValueType": true,
         "help": "By default, if the user has a cookie named \u0027webtrekkOptOut\u0027, no trackrequest will be triggered. You can change the name of the cookie here.",
-        "valueHint": "WebtrekkOptOut (String)"
+        "valueHint": "webtrekkOptOut (String)"
       }
     ],
     "enablingConditions": [
@@ -1437,7 +1441,7 @@ ___TEMPLATE_PARAMETERS___
         "simpleValueType": true,
         "defaultValue": "track",
         "enablingConditions": [],
-        "help": "Pick the track method here:\u003cbr\u003e\u003cbr\u003e\n\u003cstrong\u003eSend track request:\u003c/strong\u003e Let the underlying Smartpixel decide which request you need to track the data you mapped (recommended).\u003cbr\u003e\u003cbr\u003e\n\u003cstrong\u003eForce page request:\u003c/strong\u003e Sends a page request and omits all data that cannot be put in a page request (e.g. event name).\u003cbr\u003e\u003cbr\u003e\n\u003cstrong\u003eForce event request:\u003c/strong\u003e Sends an event request and omits all data that cannot be put in an event request (e.g. page parameter).\u003cbr\u003e\u003cbr\u003e\n\u003cstrong\u003eNo track request:\u003c/strong\u003e Do not send a trackrequest at all. Useful if you only want to\u003cbr\u003e\n\u003cul\u003e\u003cli\u003e\nreload form and link elements\n\u003c/li\u003e\u003cli\u003e\njust configure Webtrekk\u003c/li\u003e\n\u003cli\u003ejust add data but do not want to track it yet, because you might wait for more data in another trigger\u003c/li\u003e\u003c/ul\u003e"
+        "help": "Pick the track method here:\u003cbr\u003e\u003cbr\u003e\n\u003cstrong\u003eSend track request:\u003c/strong\u003e Let the underlying Smartpixel decide which request you need to track the data you mapped (recommended).\u003cbr\u003e\u003cbr\u003e\n\u003cstrong\u003eForce page request:\u003c/strong\u003e Sends a page request and omits all data that cannot be put in a page request (e.g. event name).\u003cbr\u003e\u003cbr\u003e\n\u003cstrong\u003eForce event request:\u003c/strong\u003e Sends an event request and omits all data that cannot be put in an event request (e.g. page parameter).\u003cbr\u003e\u003cbr\u003e\n\u003cstrong\u003eNo track request:\u003c/strong\u003e Do not send a trackrequest at all. Useful if you only want to\u003cbr\u003e\n\u003cul\u003e\u003cli\u003e\nreload form and link elements\n\u003c/li\u003e\u003cli\u003e\njust configure Mapp Intelligence\u003c/li\u003e\n\u003cli\u003ejust add data but do not want to track it yet, because you might wait for more data in another trigger\u003c/li\u003e\u003c/ul\u003e"
       },
       {
         "type": "CHECKBOX",
@@ -2782,7 +2786,7 @@ scenarios:
         requestType: 'page',
         keepData: false,
         track: 'track',
-        initTrackDomain: 'track.webtrekk.com',
+        initTrackDomain: 'track.mapp.com',
         initTrackId: '111111111111111',
         initDomain: 'test.de,bla.com',
         cookie: '1'
@@ -2799,7 +2803,7 @@ scenarios:
         switch (index) {
             case 0:
                 is(call, 'method', 'wtSmart.init.add');
-                is(call, 'config.trackDomain', 'track.webtrekk.com');
+                is(call, 'config.trackDomain', 'track.mapp.com');
                 is(call, 'config.cookie', '1');
                 is(call, 'config.domain', ['test.de', 'bla.com']);
                 break;
@@ -3306,7 +3310,7 @@ scenarios:
         track: 'track',
         extensionActionActivate: true,
         extensionActionType: 'standard',
-        extensionActionAttribute: 'webtrekk-data',
+        extensionActionAttribute: 'mapp-data',
         extensionActionParameter: [
             {
                 id: 2,
@@ -3336,7 +3340,7 @@ scenarios:
             case 0:
                 is(call, 'method', 'wtSmart.extension.action.config');
                 is(call, 'config.type', 'standard');
-                is(call, 'config.attribute', 'webtrekk-data');
+                is(call, 'config.attribute', 'mapp-data');
                 is(call, 'config.parameter.2', 'ck2');
                 is(call, 'config.parameter.3', 'ck3');
                 is(call, 'config.withHash', false);
@@ -3446,7 +3450,7 @@ scenarios:
         requestType: 'page',
         keepData: false,
         track: 'track',
-        initTrackDomain: 'track.webtrekk.com',
+        initTrackDomain: 'track.mapp.com',
         initTrackId: '111111111111111',
         initDomain: 'test.de,bla.com',
         cookie: '1',
@@ -3610,7 +3614,7 @@ scenarios:
         ],
         extensionActionActivate: true,
         extensionActionType: 'standard',
-        extensionActionAttribute: 'webtrekk-data',
+        extensionActionAttribute: 'mapp-data',
         extensionActionParameter: [
             {
                 id: 2,
@@ -3654,7 +3658,7 @@ scenarios:
         switch (index) {
             case 0:
                 is(call, 'method', 'wtSmart.init.add');
-                is(call, 'config.trackDomain', 'track.webtrekk.com');
+                is(call, 'config.trackDomain', 'track.mapp.com');
                 is(call, 'config.cookie', '1');
                 is(call, 'config.domain', ['test.de', 'bla.com']);
                 break;
@@ -3783,7 +3787,7 @@ scenarios:
             case 11:
                 is(call, 'method', 'wtSmart.extension.action.config');
                 is(call, 'config.type', 'standard');
-                is(call, 'config.attribute', 'webtrekk-data');
+                is(call, 'config.attribute', 'mapp-data');
                 is(call, 'config.parameter.2', 'ck2');
                 is(call, 'config.parameter.3', 'ck3');
                 is(call, 'config.withHash', false);
@@ -4065,6 +4069,6 @@ setup: |-
 
 ___NOTES___
 
-Created on 12/12/2019, 3:24:10 PM
+Created on 2/12/2020, 4:31:43 PM
 
 

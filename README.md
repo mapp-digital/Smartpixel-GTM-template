@@ -1,3 +1,3 @@
-# Webtrekk Smartpixel - Google Tag Manager Tracking template
+# Mapp Intelligence Smartpixel - Google Tag Manager Tracking template
 
-Full documentation here: https://docs.webtrekk.com/display/WIGT
+Full documentation here: https://docs.mapp.com/display/WIGT
