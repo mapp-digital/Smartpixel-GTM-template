@@ -1494,7 +1494,7 @@ log('data (type ' + data.requestType + '):', data);
  */
 const dataHandler_ = (root, propertyNames, inconsistencyFixer) => {
     const gtmNames = propertyNames.map((propertyName) => root + propertyName[0].toUpperCase() + propertyName.slice(1));
-    const shallRun = gtmNames.some((GTMName) => data[GTMName]);
+    const shallRun = gtmNames.some((GTMName) => data.hasOwnProperty(GTMName));
     if (shallRun) {
         const customProperties = ['parameter', 'category', 'goal'];
         const config = {};
