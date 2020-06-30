@@ -137,6 +137,15 @@ ___TEMPLATE_PARAMETERS___
     ]
   },
   {
+    "type": "CHECKBOX",
+    "name": "loadSmartPixelFromCDN",
+    "checkboxText": "Load SmartPixel via external source",
+    "simpleValueType": true,
+    "defaultValue": false,
+    "help": "Check if you want to load the SmartPixel via an external server. Leave unchecked to include the SmartPixel via the custom HTML tag.\u003cbr\u003e\u003cstrong\u003ePlease note:\u003c/strong\u003e Only load the SmartPixel once via the external server. If you configure multiple tags leave the box unchecked for any future Mapp Intelligence tags.",
+    "alwaysInSummary": true
+  },
+  {
     "type": "GROUP",
     "name": "actionGroup",
     "displayName": "Event",
@@ -1477,6 +1486,7 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 const logToConsole = require('logToConsole');
 const callInWindow = require('callInWindow');
 const makeTableMap = require('makeTableMap');
+const injectScript = require('injectScript');
 
 // Functions
 
@@ -1525,152 +1535,177 @@ const dataHandler_ = (root, propertyNames, inconsistencyFixer) => {
         }
     }
 };
-if (data.requestType === 'page') {
-    // Init
-    /**
-     * Handles pixel inconsistencies of init method
-     * @param {Object} config
-     */
-    const initHandler_ = (config) => {
-        if (data.initDomain) {
-            config.domain = data.initDomain.split(',');
-        }
-        config.cookie = data.cookie.toString();
-        log('Calling wtSmart.init.add: ', config);
-        callInWindow('wtSmart.init.add', config);
-    };
-    dataHandler_('init', ['trackId', 'trackDomain'], initHandler_);
-    // Advanced
-    const advancedKeys = [
-        'execCDB',
-        'useCDBCache',
-        'sendViaSDK',
-        'optOutName',
-        'forceOldEverId',
-        'secureCookie',
-        'requestObfuscation',
-        'useHashForDefaultPageName'
-    ];
 
-    /**
-     * Handles pixel inconsistencies of advanced method
-     * @param {Object} config
-     */
-    const advancedHandler_ = (config) => {
-        config.requestQueue = {
-            activated: data.requestQueueActivated,
-            resendInterval: data.requestQueueResendInterval * 1000,
-            ttl: data.requestQueueTtl * 1000,
-            size: data.requestQueueSize
+const runMapp = () => {
+    if (data.requestType === 'page') {
+        // Init
+        /**
+         * Handles pixel inconsistencies of init method
+         * @param {Object} config
+         */
+        const initHandler_ = (config) => {
+            if (data.initDomain) {
+                config.domain = data.initDomain.split(',');
+            }
+            config.cookie = data.cookie.toString();
+            log('Calling wtSmart.init.add: ', config);
+            callInWindow('wtSmart.init.add', config);
         };
-        config.useParamsForDefaultPageName = data.useParamsForDefaultPageName ? data.useParamsForDefaultPageName.split(',') : [];
-        const method = 'wtSmart.advanced.add';
-        log('Calling ' + method + ': ', config);
-        callInWindow(method, config);
-    };
-    dataHandler_('advanced', advancedKeys, advancedHandler_);
-    // Page & Search
-    dataHandler_('page', [
-        'name',
-        'parameter',
-        'category',
-        'goal',
-        'useHashForDefaultPageName',
-        'useParamsForDefaultPageName',
-        'predefined',
-        'search',
-        'numberSearchResults'
-    ]);
-    // order
-    const orderParameter_ = ['id', 'parameter', 'value', 'currency', 'couponValue', 'predefined'];
-    dataHandler_('order', orderParameter_);
+        dataHandler_('init', ['trackId', 'trackDomain'], initHandler_);
+        // Advanced
+        const advancedKeys = [
+            'execCDB',
+            'useCDBCache',
+            'sendViaSDK',
+            'optOutName',
+            'forceOldEverId',
+            'secureCookie',
+            'requestObfuscation',
+            'useHashForDefaultPageName'
+        ];
 
-    // products
-    if (data.products && data.products.length > 0) {
-        data.products.forEach(product => {
-            const status = product.status ? product.status : 'view';
-            const method = 'wtSmart.product.' + status + '.data.add';
-            log('Calling ' + method + ': ', [product]);
-            callInWindow(method, [product]);
-        });
+        /**
+         * Handles pixel inconsistencies of advanced method
+         * @param {Object} config
+         */
+        const advancedHandler_ = (config) => {
+            config.requestQueue = {
+                activated: data.requestQueueActivated,
+                resendInterval: data.requestQueueResendInterval * 1000,
+                ttl: data.requestQueueTtl * 1000,
+                size: data.requestQueueSize
+            };
+            config.useParamsForDefaultPageName = data.useParamsForDefaultPageName ? data.useParamsForDefaultPageName.split(',') : [];
+            const method = 'wtSmart.advanced.add';
+            log('Calling ' + method + ': ', config);
+            callInWindow(method, config);
+        };
+        dataHandler_('advanced', advancedKeys, advancedHandler_);
+        // Page & Search
+        dataHandler_('page', [
+            'name',
+            'parameter',
+            'category',
+            'goal',
+            'useHashForDefaultPageName',
+            'useParamsForDefaultPageName',
+            'predefined',
+            'search',
+            'numberSearchResults'
+        ]);
+        // order
+        const orderParameter_ = ['id', 'parameter', 'value', 'currency', 'couponValue', 'predefined'];
+        dataHandler_('order', orderParameter_);
+
+        // products
+        if (data.products && data.products.length > 0) {
+            data.products.forEach(product => {
+                const status = product.status ? product.status : 'view';
+                const method = 'wtSmart.product.' + status + '.data.add';
+                log('Calling ' + method + ': ', [product]);
+                callInWindow(method, [product]);
+            });
+        }
     }
-}
-else if (data.requestType === 'event') {
-    // action
-    dataHandler_('action', ['name', 'parameter', 'goal']);
-    // Extension event stuff
-    // links reload
-    if (data.extensionActionReload) {
-        log('Executing wtSmart.extension.action.reload');
-        callInWindow('wtSmart.extension.action.reload');
+    else if (data.requestType === 'event') {
+        // action
+        dataHandler_('action', ['name', 'parameter', 'goal']);
+        // Extension event stuff
+        // links reload
+        if (data.extensionActionReload) {
+            log('Executing wtSmart.extension.action.reload');
+            callInWindow('wtSmart.extension.action.reload');
+        }
+        // form update
+        if (data.extensionFormUpdate) {
+            log('Executing wtSmart.extension.form.update');
+            callInWindow('wtSmart.extension.form.update');
+        }
     }
-    // form update
-    if (data.extensionFormUpdate) {
-        log('Executing wtSmart.extension.form.update');
-        callInWindow('wtSmart.extension.form.update');
+    // campaign
+    dataHandler_('campaign', ['id', 'oncePerSession', 'parameter']);
+    // session
+    dataHandler_('session', ['loginStatus', 'parameter']);
+    // customer
+    /**
+     * Handles overwriting the validation
+     * @param {Object} config
+     */
+    const customerHandler_ = (config) => {
+        if (data.overwriteCustomerValidation) {
+            config.validation = true;
+        }
+        log('Calling wtSmart.customer.data.add: ', config);
+        callInWindow('wtSmart.customer.data.add', config);
+    };
+    dataHandler_('customer', ['id', 'predefined', 'category', 'validation'], customerHandler_);
+    // extension.action
+    if (data.extensionActionActivate) {
+        const extensionActionHandler_ = (config) => {
+            config.extend = data.extensionActionExtend ? data.extensionActionExtend.split(',') : [];
+            if (data.extensionActionDelay) {
+                config.delayDuration = data.extensionActionDelayDuration ? data.extensionActionDelayDuration : 200;
+            }
+            log('Calling wtSmart.extension.action.config', config);
+            callInWindow('wtSmart.extension.action.config', config);
+            callInWindow('wtSmart.extension.action.activate');
+            log('Automatic linktracking activated');
+        };
+        const actionExtensionParameter_ = ['type', 'attribute', 'parameter', 'withHash', 'delay', 'noDelayAttribute', 'ignore', 'replace'];
+        dataHandler_('extensionAction', actionExtensionParameter_, extensionActionHandler_);
     }
-}
-// campaign
-dataHandler_('campaign', ['id', 'oncePerSession', 'parameter']);
-// session
-dataHandler_('session', ['loginStatus', 'parameter']);
-// customer
-/**
- * Handles overwriting the validation
- * @param {Object} config
- */
-const customerHandler_ = (config) => {
-    if (data.overwriteCustomerValidation) {
-        config.validation = true;
+
+    // extension.form
+    if (data.extensionFormActivate) {
+        const extensionFormParameter_ = ['automatic', 'attribute', 'anonymous', 'pathAnalysis'];
+        const extensionFormHandler_ = (config) => {
+            if (data.extensionFormSelector) {
+                config.automatic = data.extensionFormSelector;
+            }
+            config.fullContent = data.extensionFormFullContent ? data.extensionFormFullContent.split(',') : [];
+            config.field = {};
+            if (data.extensionFormFieldAttribute) {
+                config.field.attribute = data.extensionFormFieldAttribute;
+            }
+            if (data.extensionFormFieldValue) {
+                config.field.value = data.extensionFormFieldValue;
+            }
+            if (data.extensionFormFieldDefaults) {
+                config.field.defaults = makeTableMap(data.extensionFormFieldDefaults, 'id', 'value');
+            }
+            log('Calling wtSmart.extension.form.config: ', config);
+            callInWindow('wtSmart.extension.form.config', config);
+        };
+        dataHandler_('extensionForm', extensionFormParameter_, extensionFormHandler_);
     }
-    log('Calling wtSmart.customer.data.add: ', config);
-    callInWindow('wtSmart.customer.data.add', config);
+    // Track
+    if (data.track !== false) {
+        const trackMethod = 'wtSmart.' + data.track;
+        log('Calling ' + trackMethod);
+        callInWindow(trackMethod, data.keepData);
+    }
 };
-dataHandler_('customer', ['id', 'predefined', 'category', 'validation'], customerHandler_);
-// extension.action
-if (data.extensionActionActivate) {
-    const extensionActionHandler_ = (config) => {
-        config.extend = data.extensionActionExtend ? data.extensionActionExtend.split(',') : [];
-        if (data.extensionActionDelay) {
-            config.delayDuration = data.extensionActionDelayDuration ? data.extensionActionDelayDuration : 200;
-        }
-        log('Calling wtSmart.extension.action.config', config);
-        callInWindow('wtSmart.extension.action.config', config);
-        callInWindow('wtSmart.extension.action.activate');
-        log('Automatic linktracking activated');
-    };
-    const actionExtensionParameter_ = ['type', 'attribute', 'parameter', 'withHash', 'delay', 'noDelayAttribute', 'ignore', 'replace'];
-    dataHandler_('extensionAction', actionExtensionParameter_, extensionActionHandler_);
-}
 
-// extension.form
-if (data.extensionFormActivate) {
-    const extensionFormParameter_ = ['automatic', 'attribute', 'anonymous', 'pathAnalysis'];
-    const extensionFormHandler_ = (config) => {
-        if (data.extensionFormSelector) {
-            config.automatic = data.extensionFormSelector;
-        }
-        config.fullContent = data.extensionFormFullContent ? data.extensionFormFullContent.split(',') : [];
-        config.field = {};
-        if (data.extensionFormFieldAttribute) {
-            config.field.attribute = data.extensionFormFieldAttribute;
-        }
-        if (data.extensionFormFieldValue) {
-            config.field.value = data.extensionFormFieldValue;
-        }
-        if (data.extensionFormFieldDefaults) {
-            config.field.defaults = makeTableMap(data.extensionFormFieldDefaults, 'id', 'value');
-        }
-        log('Calling wtSmart.extension.form.config: ', config);
-        callInWindow('wtSmart.extension.form.config', config);
-    };
-    dataHandler_('extensionForm', extensionFormParameter_, extensionFormHandler_);
-}
-// Track
-if (data.track !== false) {
-    const trackMethod = 'wtSmart.' + data.track;
-    log('Calling ' + trackMethod);
-    callInWindow(trackMethod, data.keepData);
+const onSuccess = () => {
+    log('Smartpixel loaded from CDN!');
+    runMapp();
+};
+
+const onFailure = () => {
+    log('Could not load Smartpixel from CDN!');
+};
+
+if(data.loadSmartPixelFromCDN) {
+    if(data.debug) {
+        log('Trying to load Smartpixel Debug version from CDN!');
+        injectScript('https://responder.wt-safetag.com/smartpixel/smart-pixel.debug.js', onSuccess, onFailure);
+    } else {
+        injectScript('https://responder.wt-safetag.com/smartpixel/smart-pixel.min.js', onSuccess, onFailure);
+    }
+  
+} else {
+    log('Smartpixel not loaded from CDN - make sure to load it yourself!');
+    runMapp();
 }
 data.gtmOnSuccess();
 
@@ -2763,6 +2798,32 @@ ___WEB_PERMISSIONS___
                     "boolean": true
                   }
                 ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "clientAnnotations": {
+      "isEditedByUser": true
+    },
+    "isRequired": true
+  },
+  {
+    "instance": {
+      "key": {
+        "publicId": "inject_script",
+        "versionId": "1"
+      },
+      "param": [
+        {
+          "key": "urls",
+          "value": {
+            "type": 2,
+            "listItem": [
+              {
+                "type": 1,
+                "string": "https://responder.wt-safetag.com/smartpixel/*"
               }
             ]
           }
