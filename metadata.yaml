@@ -15,6 +15,8 @@
 homepage: "https://mapp.com"
 documentation: "https://docs.mapp.com/display/WIGT"
 versions:
+  - sha: c83a44d3ec1f338dac5c37412c3e29a1bdac9b27
+    changeNotes: Add option to load Smartpixel from MAPP responder
   - sha: a00d5680e07c1a926e5c8077ef181a48c77caadc
     changeNotes: Fix for advanced setting not being applied when everything is set to false
   - sha: badeb05229af8ad1528627e978ab1a720266eb9e
