@@ -1352,6 +1352,50 @@ ___TEMPLATE_PARAMETERS___
         ]
       },
       {
+        "type": "GROUP",
+        "name": "userIdentificationGroup",
+        "displayName": "User Identification Settings",
+        "groupStyle": "ZIPPY_CLOSED",
+        "subParams": [
+          {
+            "type": "CHECKBOX",
+            "name": "userIdentificationEnableOptOut",
+            "checkboxText": "Enable anonymised tracking",
+            "simpleValueType": true,
+            "defaultValue": false,
+            "help": "Enable if you want to give users the option to opt-out of user-identifiable cookie tracking."
+          },
+          {
+            "type": "TEXT",
+            "name": "userIdentificationEnableOptOutOptOutCookieName",
+            "displayName": "Anonymised tracking cookie name",
+            "simpleValueType": true,
+            "help": "Alternative name for the anonymous tracking cookie. If you do not provide a name, \"miCookieOptOut\" will be used.",
+            "enablingConditions": [
+              {
+                "paramName": "userIdentificationEnableOptOut",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "userIdentificationSuppressParameter",
+            "displayName": "Supress parameter",
+            "simpleValueType": true,
+            "help": "If you additionally want to exclude parameters from tracking when the user chose anonymous tracking, you can indicate them here as a comma-separated list, for example \"uc5,uc7,cd\". Find out more about request parameter \u003ca target\u003d\"_blank\" href\u003d\"https://zdext.webtrekk.com/examples/parameter-en.html\"\u003e here\u003c/a\u003e.",
+            "enablingConditions": [
+              {
+                "paramName": "userIdentificationEnableOptOut",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ]
+          }
+        ]
+      },
+      {
         "displayName": "Cross Device Bridge",
         "name": "cdbGroup",
         "groupStyle": "ZIPPY_CLOSED",
@@ -1575,6 +1619,11 @@ const runMapp = () => {
                 ttl: data.requestQueueTtl * 1000,
                 size: data.requestQueueSize
             };
+            config.userIdentification = {
+                enableOptOut: data.userIdentificationEnableOptOut,
+                optOutCookieName: data.userIdentificationEnableOptOutOptOutCookieName,
+                suppressParameter: data.userIdentificationSuppressParameter.split(',')
+            };
             config.useParamsForDefaultPageName = data.useParamsForDefaultPageName ? data.useParamsForDefaultPageName.split(',') : [];
             const method = 'wtSmart.advanced.add';
             log('Calling ' + method + ': ', config);
@@ -1702,12 +1751,13 @@ if(data.loadSmartPixelFromCDN) {
     } else {
         injectScript('https://responder.wt-safetag.com/smartpixel/smart-pixel.min.js', onSuccess, onFailure);
     }
-  
+
 } else {
     log('Smartpixel not loaded from CDN - make sure to load it yourself!');
     runMapp();
 }
 data.gtmOnSuccess();
+
 
 
 ___WEB_PERMISSIONS___
@@ -2894,7 +2944,10 @@ scenarios:
         requestQueueResendInterval: '7',
         requestQueueSize: '99',
         requestQueueTtl: '299',
-        useParamsForDefaultPageName: 'para1,para2'
+        useParamsForDefaultPageName: 'para1,para2',
+        userIdentificationEnableOptOut: true,
+        userIdentificationEnableOptOutOptOutCookieName: 'testcookie1234',
+        userIdentificationSuppressParameter: 'uc5,uc7,cd'
     };
 
     runCode(mockData);
@@ -2921,6 +2974,9 @@ scenarios:
                 is(call, 'config.requestQueue.size', '99');
                 is(call, 'config.requestQueue.ttl', 299000);
                 is(call, 'config.useParamsForDefaultPageName', ['para1', 'para2']);
+                is(call, 'config.userIdentification.enableOptOut', true);
+                is(call, 'config.userIdentification.optOutCookieName', 'testcookie1234');
+                is(call, 'config.userIdentification.suppressParameter', ['uc5', 'uc7', 'cd']);
                 break;
             case 1:
                 is(call, 'method', 'wtSmart.track');
@@ -3528,6 +3584,9 @@ scenarios:
         requestQueueSize: '99',
         requestQueueTtl: '299',
         useParamsForDefaultPageName: 'para1,para2',
+        userIdentificationEnableOptOut: true,
+        userIdentificationEnableOptOutOptOutCookieName: 'testcookie1234',
+        userIdentificationSuppressParameter: 'uc5,uc7,cd',
         pageName: 'pagename',
         pageCategory: [
             {
@@ -3738,6 +3797,9 @@ scenarios:
                 is(call, 'config.requestQueue.size', '99');
                 is(call, 'config.requestQueue.ttl', 299000);
                 is(call, 'config.useParamsForDefaultPageName', ['para1', 'para2']);
+                is(call, 'config.userIdentification.enableOptOut', true);
+                is(call, 'config.userIdentification.optOutCookieName', 'testcookie1234');
+                is(call, 'config.userIdentification.suppressParameter', ['uc5', 'uc7', 'cd']);
                 break;
             case 2:
                 is(call, 'method', 'wtSmart.page.data.add');
