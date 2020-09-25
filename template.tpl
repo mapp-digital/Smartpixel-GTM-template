@@ -22,8 +22,8 @@ ___INFO___
   "version": 1,
   "brand": {
     "thumbnail": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH5AEeCS4g8x/oQwAAA5VJREFUeNrt202ITlEcx/EvY4zXGc3kZcq7aRaMmQ0RG5IdsZhkko1iYTYWSmFHKWVnM8pCFhIpFkRCISmR98iQ12EGmUGMl+exmP9C03PPvc+de45n8vvUrafufe75n/O/555z7u2CiIiIiIiIiIiIiIiIiIiIiIiIiEhmhgQqpwaYBFQDFQX254GvwHugw377UAHUAuOBygL1zwPfgA/AW6B7sCdgFbASaACmAxMdx/4EXgPtwA3gKHArozjqgRZgITALmAyMjDg2B7wBngO3gVPA2cHWs9YBr4Beu6qK3XLAD+AaMG8AcdQBZ+xcv1PG0Qs8AZYMhttZgzVaPuPtIDCtiFiqgV0e4jhsvafkDAV22JWW97Q9BzYkiGURcNVjHO+ATaWWgGMeK/z31gvsc4xdzUBXgDhy1iv/uTLgfMpK/E55X84De6zX/W15yjEnZ3HkUvz3XIE4gs2CRgNHbJaTxCfgPvCi3xSvyqaoM4Amx+ykv73ANvu91AbbioT/vWOzrQ6bcv4ERgET7B5fb7O2JE4Da4HPoa/+PQmvki6gFZhjg2PUhVBjx+ywyiQ59xZrrKS3nf3AfFsLDI+IZYxdDCuAKwnP2xa68RcmDOwQUJ7i/FXAyQS3qE7rTXFx3Lb5fxqrbWEYV0ZzqMYflqDSncCaDMraWkRvKLT9Ag5kEMcE4FKCMW1SiATsjgnkI7Agw/JW2viRZnDdnGEcVcCFmDJPhHim8zQmiPkeyt1Y5BojZ2NU1o9aymJ6f9cAV+6xWoDvjgBaPZZ9vIgE3Bzo9NChMabsnb4aoNzup1EFX7bxwZexwJeECZjredXf5ij7osWauWrgnqPg9QHGn+0JGv94gDiWAT2O1Xqtj0KnxjynqQ9Q8doECWgIEEelTW2jYlhaTHcq5pl6lNfA4wAV/0Lfu4IoD+xi8K0HeOjYv9hHApoc+x4FWoP0WiNHuWWzpRCuO/bN9pEA1/P49kCV/mW9LcpLe64TgqvOk30kYLhjX3egSudiHnr12DEhfHLsG+cjAfmYhiFgEkohDld7DPGRALIo0HNZIePIbFEhSoASIEqAEiBKgBIgSoASIEqAEiBKgBIgSoASIEqAEiAlkgDXxw/DAsZcnnJfyLYbkfQkxbzCawRmUvi9613gWaCK19H3IUe+QF3u0/dJaQhT6Psct1Bi3lEi35CJiIiIiIiIiIiIiIiIiIiIiIiIyH/lDzziTp+TUYygAAAAAElFTkSuQmCC",
-    "displayName": "Mapp Digital",
-    "id": "brand_dummy"
+    "displayName": "Webtrekk",
+    "id": "github.com_Webtrekk"
   },
   "containerContexts": [
     "WEB"
@@ -1622,7 +1622,7 @@ const runMapp = () => {
             config.userIdentification = {
                 enableOptOut: data.userIdentificationEnableOptOut,
                 optOutCookieName: data.userIdentificationEnableOptOutOptOutCookieName,
-                suppressParameter: data.userIdentificationSuppressParameter.split(',')
+                suppressParameter: data.userIdentificationSuppressParameter ? data.userIdentificationSuppressParameter.split(',') : []
             };
             config.useParamsForDefaultPageName = data.useParamsForDefaultPageName ? data.useParamsForDefaultPageName.split(',') : [];
             const method = 'wtSmart.advanced.add';
