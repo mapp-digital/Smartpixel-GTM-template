@@ -15,6 +15,8 @@
 homepage: "https://mapp.com"
 documentation: "https://docs.mapp.com/display/WIGT"
 versions:
+  - sha: 2bc43a8937b22e5a66c123e5e15db22a4fffb573
+    changeNotes: Fix exception bug
   - sha: 1a995a8d1730cb5bdf6b5481ad1358a077c25332
     changeNotes: Add advanced options for user identification supression
   - sha: c83a44d3ec1f338dac5c37412c3e29a1bdac9b27
