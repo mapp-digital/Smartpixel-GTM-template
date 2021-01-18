@@ -9,8 +9,8 @@ Google may provide), as modified from time to time.
 ___INFO___
 
 {
-  "displayName": "Mapp Intelligence Smartpixel - Tracking Configuration",
-  "description": "Initialize tracking and configure tracking requests.",
+  "displayName": "Mapp Cloud Tracking",
+  "description": "Initialise and configure tracking for Mapp Intelligence and Mapp Acquire.",
   "categories": [
     "ANALYTICS",
     "CONVERSIONS",
@@ -144,6 +144,14 @@ ___TEMPLATE_PARAMETERS___
     "defaultValue": false,
     "help": "Check if you want to load the SmartPixel via an external server. Leave unchecked to include the SmartPixel via the custom HTML tag.\u003cbr\u003e\u003cstrong\u003ePlease note:\u003c/strong\u003e Only load the SmartPixel once via the external server. If you configure multiple tags leave the box unchecked for any future Mapp Intelligence tags.",
     "alwaysInSummary": true
+  },
+  {
+    "type": "TEXT",
+    "name": "aquire",
+    "displayName": "Mapp Aquire",
+    "simpleValueType": true,
+    "lineCount": 2,
+    "help": "Paste your Mapp Aquire script tag here."
   },
   {
     "type": "GROUP",
@@ -403,7 +411,6 @@ ___TEMPLATE_PARAMETERS___
     ]
   },
   {
-    "help": "Page help text",
     "displayName": "Page",
     "name": "pageGroup",
     "groupStyle": "ZIPPY_CLOSED",
@@ -1051,8 +1058,7 @@ ___TEMPLATE_PARAMETERS___
         "help": "Please enter your URM categories as configured in your account. The category ID is the ID given in your account configuration.",
         "newRowButtonText": "Add URM category"
       }
-    ],
-    "help": "Please enter the user ID here. This ID can be used to identify a user across different web browsers and devices. \u003cbr\u003e\nUsually you should use an email address for this. \u003cbr\u003e \u003cbr\u003eThe user ID will be hashed automatically by the pixel if it is an email address."
+    ]
   },
   {
     "type": "GROUP",
@@ -1771,8 +1777,15 @@ if(data.loadSmartPixelFromCDN) {
     log('Smartpixel not loaded from CDN - make sure to load it yourself!');
     runMapp();
 }
-data.gtmOnSuccess();
 
+if(data.aquire) {
+  const aqUrlStart = data.aquire.indexOf('https://c.flx1.com/'), aqDash = data.aquire.indexOf('-'), aqUrlEnd = data.aquire.indexOf('.js');
+  const aqId = data.aquire.substring(aqDash + 1, aqUrlEnd), aqM = data.aquire.substring(aqUrlStart + 19, aqDash);
+  const aqUrl = 'https://c.flx1.com/' + aqM + '-' + aqId + '.js?id=' + aqId + '&m=' + aqM;
+  log('Load Mapp Aquire from: ', aqUrl);
+  injectScript(aqUrl, ()=>{log('Mapp Aquire loaded');}, ()=>{log('Mapp Aquire could not be loaded');});
+}
+data.gtmOnSuccess();
 
 
 ___WEB_PERMISSIONS___
@@ -2889,6 +2902,10 @@ ___WEB_PERMISSIONS___
               {
                 "type": 1,
                 "string": "https://responder.wt-safetag.com/smartpixel/*"
+              },
+              {
+                "type": 1,
+                "string": "https://c.flx1.com/*"
               }
             ]
           }
