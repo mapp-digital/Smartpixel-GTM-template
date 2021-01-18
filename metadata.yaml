@@ -15,6 +15,8 @@
 homepage: "https://mapp.com"
 documentation: "https://docs.mapp.com/display/WIGT"
 versions:
+  - sha: f9f57320936144e83ce5db09ebeefadd10b4e194
+    changenotes: Mapp Cloud rebrand & add Mapp Acquire
   - sha: 56a0deaa0f4b3a397228a8cb23a78c90faa61ebc
     changeNotes: Add 'Anonymous tracking as default setting' option
   - sha: 2bc43a8937b22e5a66c123e5e15db22a4fffb573
