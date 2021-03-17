@@ -151,7 +151,15 @@ ___TEMPLATE_PARAMETERS___
     "displayName": "Mapp Aquire",
     "simpleValueType": true,
     "lineCount": 2,
-    "help": "Paste your Mapp Aquire script tag here."
+    "help": "Paste your Mapp Aquire script tag here.",
+    "valueValidators": [
+      {
+        "type": "REGEX",
+        "args": [
+          "(^$|.*id\u003d\\d+\u0026m\u003d\\d+.*)"
+        ]
+      }
+    ]
   },
   {
     "type": "GROUP",
