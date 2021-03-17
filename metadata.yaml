@@ -15,6 +15,8 @@
 homepage: "https://mapp.com"
 documentation: "https://docs.mapp.com/display/WIGT"
 versions:
+  - sha: e48746bbc8fa0b907c776f04523c7c5f9cb81cf9
+    changeNotes: Input validation for Mapp Acquire 
   - sha: f9f57320936144e83ce5db09ebeefadd10b4e194
     changenotes: Mapp Cloud rebrand & add Mapp Acquire
   - sha: 56a0deaa0f4b3a397228a8cb23a78c90faa61ebc
