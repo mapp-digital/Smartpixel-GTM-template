@@ -147,11 +147,11 @@ ___TEMPLATE_PARAMETERS___
   },
   {
     "type": "TEXT",
-    "name": "aquire",
-    "displayName": "Mapp Aquire",
+    "name": "acquire",
+    "displayName": "Mapp Acquire",
     "simpleValueType": true,
     "lineCount": 2,
-    "help": "Paste your Mapp Aquire script tag here.",
+    "help": "Paste your Mapp Acquire script tag here.",
     "valueValidators": [
       {
         "type": "REGEX",
@@ -1786,12 +1786,12 @@ if(data.loadSmartPixelFromCDN) {
     runMapp();
 }
 
-if(data.aquire) {
-  const aqUrlStart = data.aquire.indexOf('https://c.flx1.com/'), aqDash = data.aquire.indexOf('-'), aqUrlEnd = data.aquire.indexOf('.js');
-  const aqId = data.aquire.substring(aqDash + 1, aqUrlEnd), aqM = data.aquire.substring(aqUrlStart + 19, aqDash);
+if(data.acquire) {
+  const aqUrlStart = data.acquire.indexOf('https://c.flx1.com/'), aqDash = data.acquire.indexOf('-'), aqUrlEnd = data.acquire.indexOf('.js');
+  const aqId = data.acquire.substring(aqDash + 1, aqUrlEnd), aqM = data.acquire.substring(aqUrlStart + 19, aqDash);
   const aqUrl = 'https://c.flx1.com/' + aqM + '-' + aqId + '.js?id=' + aqId + '&m=' + aqM;
-  log('Load Mapp Aquire from: ', aqUrl);
-  injectScript(aqUrl, ()=>{log('Mapp Aquire loaded');}, ()=>{log('Mapp Aquire could not be loaded');});
+  log('Load Mapp Acquire from: ', aqUrl);
+  injectScript(aqUrl, ()=>{log('Mapp Acquire loaded');}, ()=>{log('Mapp Acquire could not be loaded');});
 }
 data.gtmOnSuccess();
 
