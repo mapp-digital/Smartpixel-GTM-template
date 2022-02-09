@@ -1447,6 +1447,13 @@ ___TEMPLATE_PARAMETERS___
         ]
       },
       {
+        "type": "CHECKBOX",
+        "name": "requestLimitActivated",
+        "checkboxText": "Deactivate request limit cookie",
+        "simpleValueType": true,
+        "help": "Check if you want to deactivate the request limitation functionality and its corresponding cookie (wt_rla)."
+      },
+      {
         "help": "Check this box if you want to add the \"secure\" flag to all clientside Mapp Intelligence cookies. Please be aware that your entire website needs to be accessible via HTTPS if you want to use this feature.",
         "simpleValueType": true,
         "name": "advancedSecureCookie",
@@ -1646,6 +1653,9 @@ const runMapp = () => {
                 resendInterval: data.requestQueueResendInterval * 1000,
                 ttl: data.requestQueueTtl * 1000,
                 size: data.requestQueueSize
+            };
+            config.requestLimit = {
+                activated: !data.requestLimitActivated
             };
             config.userIdentification = {
                 enableOptOut: data.userIdentificationEnableOptOut,
