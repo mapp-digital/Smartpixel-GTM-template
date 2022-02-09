@@ -15,6 +15,8 @@
 homepage: "https://mapp.com"
 documentation: "https://docs.mapp.com/display/WIGT"
 versions:
+  - sha: 666323a20387670ca70e2e454c8ea3e0c9e6af44
+    changeNotes: Add option to deactivate rla cookie 
   - sha: e48746bbc8fa0b907c776f04523c7c5f9cb81cf9
     changeNotes: Input validation for Mapp Acquire 
   - sha: f9f57320936144e83ce5db09ebeefadd10b4e194
