@@ -744,14 +744,14 @@ ___TEMPLATE_PARAMETERS___
             "help": "Please enter any additional information you want to track in your order. You need to have an custom e-commerce parameter configured in your account to track additional information (please enter the ID of your e-commerce parameter).",
             "newRowButtonText": "Add e-commerce parameter"
           }
+        ],
+        "enablingConditions": [
+          {
+            "paramName": "requestType",
+            "paramValue": "page",
+            "type": "EQUALS"
+          }
         ]
-      }
-    ],
-    "enablingConditions": [
-      {
-        "paramName": "requestType",
-        "paramValue": "page",
-        "type": "EQUALS"
       }
     ]
   },
@@ -1684,16 +1684,6 @@ const runMapp = () => {
         // order
         const orderParameter_ = ['id', 'parameter', 'value', 'currency', 'couponValue', 'predefined'];
         dataHandler_('order', orderParameter_);
-
-        // products
-        if (data.products && data.products.length > 0) {
-            data.products.forEach(product => {
-                const status = product.status ? product.status : 'view';
-                const method = 'wtSmart.product.' + status + '.data.add';
-                log('Calling ' + method + ': ', [product]);
-                callInWindow(method, [product]);
-            });
-        }
     }
     else if (data.requestType === 'event') {
         // action
@@ -1709,6 +1699,15 @@ const runMapp = () => {
             log('Executing wtSmart.extension.form.update');
             callInWindow('wtSmart.extension.form.update');
         }
+    }
+    // products
+    if (data.products && data.products.length > 0) {
+        data.products.forEach(product => {
+            const status = product.status ? product.status : 'view';
+            const method = 'wtSmart.product.' + status + '.data.add';
+            log('Calling ' + method + ': ', [product]);
+            callInWindow(method, [product]);
+        });
     }
     // campaign
     dataHandler_('campaign', ['id', 'oncePerSession', 'parameter']);
