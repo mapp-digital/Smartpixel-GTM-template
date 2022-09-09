@@ -1616,6 +1616,7 @@ const dataHandler_ = (root, propertyNames, inconsistencyFixer) => {
 };
 
 const runMapp = () => {
+    callInWindow('wtSmart._ps', 32, '1.0.11');
     if (data.requestType === 'page') {
         // Init
         /**
@@ -2879,6 +2880,45 @@ ___WEB_PERMISSIONS___
                   {
                     "type": 1,
                     "string": "wtSmart.trackAction"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "wtSmart._ps"
                   },
                   {
                     "type": 8,
