@@ -15,6 +15,8 @@
 homepage: "https://mapp.com"
 documentation: "https://docs.mapp.com/display/WIGT"
 versions:
+  - sha: 6817ae05c57ca963945d779d9687b9c646618093
+    changeNotes: add Pixel statistics
   - sha: 1fe22cebe9ba0c51140b3d8f1b4805050f75b252
     changeNotes: Product tracking via event
   - sha: 666323a20387670ca70e2e454c8ea3e0c9e6af44
