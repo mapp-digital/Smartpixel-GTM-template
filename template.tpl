@@ -22,8 +22,8 @@ ___INFO___
   "version": 1,
   "brand": {
     "thumbnail": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH5AEeCS4g8x/oQwAAA5VJREFUeNrt202ITlEcx/EvY4zXGc3kZcq7aRaMmQ0RG5IdsZhkko1iYTYWSmFHKWVnM8pCFhIpFkRCISmR98iQ12EGmUGMl+exmP9C03PPvc+de45n8vvUrafufe75n/O/555z7u2CiIiIiIiIiIiIiIiIiIiIiIiIiEhmhgQqpwaYBFQDFQX254GvwHugw377UAHUAuOBygL1zwPfgA/AW6B7sCdgFbASaACmAxMdx/4EXgPtwA3gKHArozjqgRZgITALmAyMjDg2B7wBngO3gVPA2cHWs9YBr4Beu6qK3XLAD+AaMG8AcdQBZ+xcv1PG0Qs8AZYMhttZgzVaPuPtIDCtiFiqgV0e4jhsvafkDAV22JWW97Q9BzYkiGURcNVjHO+ATaWWgGMeK/z31gvsc4xdzUBXgDhy1iv/uTLgfMpK/E55X84De6zX/W15yjEnZ3HkUvz3XIE4gs2CRgNHbJaTxCfgPvCi3xSvyqaoM4Amx+ykv73ANvu91AbbioT/vWOzrQ6bcv4ERgET7B5fb7O2JE4Da4HPoa/+PQmvki6gFZhjg2PUhVBjx+ywyiQ59xZrrKS3nf3AfFsLDI+IZYxdDCuAKwnP2xa68RcmDOwQUJ7i/FXAyQS3qE7rTXFx3Lb5fxqrbWEYV0ZzqMYflqDSncCaDMraWkRvKLT9Ag5kEMcE4FKCMW1SiATsjgnkI7Agw/JW2viRZnDdnGEcVcCFmDJPhHim8zQmiPkeyt1Y5BojZ2NU1o9aymJ6f9cAV+6xWoDvjgBaPZZ9vIgE3Bzo9NChMabsnb4aoNzup1EFX7bxwZexwJeECZjredXf5ij7osWauWrgnqPg9QHGn+0JGv94gDiWAT2O1Xqtj0KnxjynqQ9Q8doECWgIEEelTW2jYlhaTHcq5pl6lNfA4wAV/0Lfu4IoD+xi8K0HeOjYv9hHApoc+x4FWoP0WiNHuWWzpRCuO/bN9pEA1/P49kCV/mW9LcpLe64TgqvOk30kYLhjX3egSudiHnr12DEhfHLsG+cjAfmYhiFgEkohDld7DPGRALIo0HNZIePIbFEhSoASIEqAEiBKgBIgSoASIEqAEiBKgBIgSoASIEqAEiAlkgDXxw/DAsZcnnJfyLYbkfQkxbzCawRmUvi9613gWaCK19H3IUe+QF3u0/dJaQhT6Psct1Bi3lEi35CJiIiIiIiIiIiIiIiIiIiIiIiIyH/lDzziTp+TUYygAAAAAElFTkSuQmCC",
-    "displayName": "Mapp Digital",
-    "id": "github.com_Webtrekk"
+    "displayName": "mapp-digital",
+    "id": "github.com_mapp-digital"
   },
   "containerContexts": [
     "WEB"
@@ -139,11 +139,179 @@ ___TEMPLATE_PARAMETERS___
   {
     "type": "CHECKBOX",
     "name": "loadSmartPixelFromCDN",
-    "checkboxText": "Load SmartPixel via external source",
+    "checkboxText": "Load SmartPixel from Mapp CDN",
     "simpleValueType": true,
     "defaultValue": false,
-    "help": "Check if you want to load the SmartPixel via an external server. Leave unchecked to include the SmartPixel via the custom HTML tag.\u003cbr\u003e\u003cstrong\u003ePlease note:\u003c/strong\u003e Only load the SmartPixel once via the external server. If you configure multiple tags leave the box unchecked for any future Mapp Intelligence tags.",
+    "help": "Check if you want to load SmartPixel via Mapp CDN. Leave unchecked to include the SmartPixel via the custom HTML tag.\u003cbr\u003e\u003cstrong\u003ePlease note:\u003c/strong\u003e Only load the SmartPixel once. If you configure multiple tags leave the box unchecked for any future Mapp Intelligence tags.",
     "alwaysInSummary": true
+  },
+  {
+    "type": "SIMPLE_TABLE",
+    "name": "advanced2",
+    "displayName": "Advanced configuration",
+    "simpleTableColumns": [
+      {
+        "defaultValue": "",
+        "displayName": "Setting",
+        "name": "parameter",
+        "type": "SELECT",
+        "selectItems": [
+          {
+            "value": "secureCookie",
+            "displayValue": "secureCookie"
+          },
+          {
+            "value": "requestObfuscation",
+            "displayValue": "requestObfuscation"
+          },
+          {
+            "value": "forceOldEverId",
+            "displayValue": "forceOldEverId"
+          },
+          {
+            "value": "sendViaSDK",
+            "displayValue": "sendViaSDK"
+          },
+          {
+            "value": "requestQueue_activated",
+            "displayValue": "RequestQueue: activated"
+          },
+          {
+            "value": "requestQueue_resendInterval",
+            "displayValue": "RequestQueue: resendInterval"
+          },
+          {
+            "value": "requestQueue_ttl",
+            "displayValue": "RequestQueue: ttl"
+          },
+          {
+            "value": "requestQueue_size",
+            "displayValue": "RequestQueue: size"
+          },
+          {
+            "value": "requestQueue_retries",
+            "displayValue": "RequestQueue: retries"
+          },
+          {
+            "value": "requestQueue_retriesOption",
+            "displayValue": "RequestQueue: retriesOption"
+          },
+          {
+            "value": "sendViaServer_activated",
+            "displayValue": "SendViaServer: activated"
+          },
+          {
+            "value": "sendViaServer_serverDomain",
+            "displayValue": "SendViaServer: serverDomain"
+          },
+          {
+            "value": "sendViaServer_serverPath",
+            "displayValue": "SendViaServer: serverPath"
+          },
+          {
+            "value": "sendViaServer_droppedRequests",
+            "displayValue": "SendViaServer: droppedRequests"
+          },
+          {
+            "value": "sendViaServer_blacklist",
+            "displayValue": "SendViaServer: blacklist"
+          },
+          {
+            "value": "useHashForDefaultPageName",
+            "displayValue": "useHashForDefaultPageName"
+          },
+          {
+            "value": "useParamsForDefaultPageName",
+            "displayValue": "useParamsForDefaultPageName"
+          },
+          {
+            "value": "requestLimit_activated",
+            "displayValue": "RequestLimit: activated"
+          },
+          {
+            "value": "requestLimit_amount",
+            "displayValue": "RequestLimit: amount"
+          },
+          {
+            "value": "requestLimit_duration",
+            "displayValue": "RequestLimit: duration"
+          }
+        ]
+      },
+      {
+        "defaultValue": "",
+        "displayName": "Value",
+        "name": "value",
+        "type": "TEXT"
+      }
+    ],
+    "newRowButtonText": "Add Advanced Config Setting",
+    "help": "Find more information about each setting here: \u003ca href\u003d\"https://documentation.mapp.com/1.0/en/advanced-15741253.html\" target\u003d\"_blank\"\u003eSmartpixel Advanced Settings\u003c/a\u003e\u003c/br\u003e\u003c/br\u003e\nsecureCookie: true, false\u003c/br\u003e\nrequestObfuscation: true, false\u003c/br\u003e\nforceOldEverId: true, false\u003c/br\u003e\nrequestQueue.activated: true, false\u003c/br\u003e\nrequestQueue.ttl: number (seconds)\u003c/br\u003e\nrequestQueue.resendInterval: number (milliseconds)\u003c/br\u003e\nrequestQueue.size: number\u003c/br\u003e\nrequestQueue.retries: number\u003c/br\u003e\nrequestQueue.retriesOption: 1,2\u003c/br\u003e\nsendViaSDK: true, false\u003c/br\u003e\nsendViaServer.activated: true, false\u003c/br\u003e\nsendViaServer.serverDomain: string\u003c/br\u003e\nsendViaServer.serverPath: string\u003c/br\u003e\nsendViaServer.droppedRequests: 0,1,2,3\u003c/br\u003e\nsendViaServer.blacklist: string1,string2,string3\u003c/br\u003e\nuseHashForDefaultPageName: true, false\u003c/br\u003e\nuseParamsForDefaultPageName: string1,string2,string3\u003c/br\u003e\nrequestLimit.activated: true, false\u003c/br\u003e\nrequestLimit.amount: number\u003c/br\u003e\nrequestLimit.duration: number (seconds)",
+    "enablingConditions": [
+      {
+        "paramName": "requestType",
+        "paramValue": "page",
+        "type": "EQUALS"
+      }
+    ]
+  },
+  {
+    "type": "SIMPLE_TABLE",
+    "name": "gdpr",
+    "displayName": "GDPR Configuration",
+    "simpleTableColumns": [
+      {
+        "defaultValue": "",
+        "displayName": "Setting",
+        "name": "parameter",
+        "type": "SELECT",
+        "selectItems": [
+          {
+            "value": "optOutName",
+            "displayValue": "optOutName (opt-out cookie)"
+          },
+          {
+            "value": "userIdentification_enableAnonymousFunction",
+            "displayValue": "UserIdentification: enableAnonymousFunction"
+          },
+          {
+            "value": "userIdentification_anonymousCookieName",
+            "displayValue": "UserIdentification: anonymousCookieName"
+          },
+          {
+            "value": "userIdentification_anonymousOptIn",
+            "displayValue": "UserIdentification: anonymousOptIn"
+          },
+          {
+            "value": "userIdentification_suppressParameter",
+            "displayValue": "UserIdentification: suppressParameter"
+          },
+          {
+            "value": "userIdentification_temporarySessionId",
+            "displayValue": "UserIdentification: temporarySessionId"
+          },
+          {
+            "value": "userIdentification_saveTemporarySessionId",
+            "displayValue": "UserIdentification: saveTemporarySessionId"
+          }
+        ]
+      },
+      {
+        "defaultValue": "",
+        "displayName": "Value",
+        "name": "value",
+        "type": "TEXT"
+      }
+    ],
+    "newRowButtonText": "Add GDPR Config Setting",
+    "help": "Find more information about each setting here: \u003ca href\u003d\"https://documentation.mapp.com/1.0/en/advanced-15741253.html\" target\u003d\"_blank\"\u003eSmartpixel Advanced Settings\u003c/a\u003e\u003c/br\u003e\u003c/br\u003e\n\noptOutName: string\u003c/br\u003e\nuserIdentification.enableAnonymousFunction: true, false\u003c/br\u003e\nuserIdentification.anonymousCookieName: string\u003c/br\u003e\nuserIdentification.anonymousOptIn: true, false\u003c/br\u003e\nuserIdentification.suppressParameter: string1,string2,string3\u003c/br\u003e\nuserIdentification.temporarySessionId: string\u003c/br\u003e\nuserIdentification.saveTemporarySessionId: true, false",
+    "enablingConditions": [
+      {
+        "paramName": "requestType",
+        "paramValue": "page",
+        "type": "EQUALS"
+      }
+    ]
   },
   {
     "type": "TEXT",
@@ -1305,200 +1473,6 @@ ___TEMPLATE_PARAMETERS___
     ]
   },
   {
-    "displayName": "Advanced",
-    "name": "advanced",
-    "groupStyle": "ZIPPY_CLOSED",
-    "type": "GROUP",
-    "subParams": [
-      {
-        "displayName": "Request Queue Settings",
-        "name": "requestQueueGroup",
-        "groupStyle": "ZIPPY_CLOSED",
-        "type": "GROUP",
-        "subParams": [
-          {
-            "help": "Check this box if you want to save data in a queue in case the device is offline to ensure data quality.",
-            "defaultValue": true,
-            "simpleValueType": true,
-            "name": "requestQueueActivated",
-            "checkboxText": "RequestQueue",
-            "type": "CHECKBOX"
-          },
-          {
-            "help": "Please enter after how many seconds a failed request has to be resent.",
-            "valueValidators": [
-              {
-                "type": "POSITIVE_NUMBER"
-              }
-            ],
-            "displayName": "Request interval (sec.)",
-            "defaultValue": 5,
-            "simpleValueType": true,
-            "name": "requestQueueResendInterval",
-            "type": "TEXT"
-          },
-          {
-            "help": "Please specify how long a request has to be saved in the queue (in sec.)",
-            "valueValidators": [
-              {
-                "type": "POSITIVE_NUMBER"
-              }
-            ],
-            "displayName": "Max. time in queue (sec.)",
-            "defaultValue": 300,
-            "simpleValueType": true,
-            "name": "requestQueueTtl",
-            "type": "TEXT"
-          },
-          {
-            "help": "Please specify the maximum number of requests that can be saved in the queue.",
-            "valueValidators": [
-              {
-                "type": "POSITIVE_NUMBER"
-              }
-            ],
-            "displayName": "Max. number of requests",
-            "defaultValue": 100,
-            "simpleValueType": true,
-            "name": "requestQueueSize",
-            "type": "TEXT"
-          }
-        ]
-      },
-      {
-        "type": "GROUP",
-        "name": "userIdentificationGroup",
-        "displayName": "User Identification Settings",
-        "groupStyle": "ZIPPY_CLOSED",
-        "subParams": [
-          {
-            "type": "CHECKBOX",
-            "name": "userIdentificationEnableOptOut",
-            "checkboxText": "Enable anonymised tracking",
-            "simpleValueType": true,
-            "defaultValue": false,
-            "help": "Enable if you want to give users the option to opt-out of user-identifiable cookie tracking."
-          },
-          {
-            "type": "CHECKBOX",
-            "name": "userIdentificationAnonymousOptIn",
-            "checkboxText": "Anonymous tracking as default setting",
-            "simpleValueType": true,
-            "help": "Enable if you want to suppress the visitor ID cookie by default and give the end user the option to actively agree to user identifiable tracking.",
-            "enablingConditions": [
-              {
-                "paramName": "userIdentificationEnableOptOut",
-                "paramValue": true,
-                "type": "EQUALS"
-              }
-            ]
-          },
-          {
-            "type": "TEXT",
-            "name": "userIdentificationEnableOptOutOptOutCookieName",
-            "displayName": "Anonymised tracking cookie name",
-            "simpleValueType": true,
-            "help": "Alternative name for the anonymous tracking cookie. If you do not provide a name, \"miCookieOptOut\" will be used.",
-            "enablingConditions": [
-              {
-                "paramName": "userIdentificationEnableOptOut",
-                "paramValue": true,
-                "type": "EQUALS"
-              }
-            ]
-          },
-          {
-            "type": "TEXT",
-            "name": "userIdentificationSuppressParameter",
-            "displayName": "Supress parameter",
-            "simpleValueType": true,
-            "help": "If you additionally want to exclude parameters from tracking when the user chose anonymous tracking, you can indicate them here as a comma-separated list, for example \"uc5,uc7,cd\". Find out more about request parameter \u003ca target\u003d\"_blank\" href\u003d\"https://zdext.webtrekk.com/examples/parameter-en.html\"\u003e here\u003c/a\u003e.",
-            "enablingConditions": [
-              {
-                "paramName": "userIdentificationEnableOptOut",
-                "paramValue": true,
-                "type": "EQUALS"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "displayName": "Cross Device Bridge",
-        "name": "cdbGroup",
-        "groupStyle": "ZIPPY_CLOSED",
-        "type": "GROUP",
-        "subParams": [
-          {
-            "help": "Activate/ deactivate the Cross Device Bridge.",
-            "defaultValue": true,
-            "simpleValueType": true,
-            "name": "advancedExecCDB",
-            "checkboxText": "activate Cross Device Bridge",
-            "type": "CHECKBOX"
-          },
-          {
-            "help": "Activate/ deactivate the image cache for the Cross Device Bridge. This way the CDB user id is saved with the image cache of the browser.",
-            "simpleValueType": true,
-            "name": "advancedUseCDBCache",
-            "checkboxText": "CDB image cache",
-            "type": "CHECKBOX"
-          }
-        ]
-      },
-      {
-        "type": "CHECKBOX",
-        "name": "requestLimitActivated",
-        "checkboxText": "Deactivate request limit cookie",
-        "simpleValueType": true,
-        "help": "Check if you want to deactivate the request limitation functionality and its corresponding cookie (wt_rla)."
-      },
-      {
-        "help": "Check this box if you want to add the \"secure\" flag to all clientside Mapp Intelligence cookies. Please be aware that your entire website needs to be accessible via HTTPS if you want to use this feature.",
-        "simpleValueType": true,
-        "name": "advancedSecureCookie",
-        "checkboxText": "Secure Cookie",
-        "type": "CHECKBOX"
-      },
-      {
-        "help": "Check this box if you want to obfuscate requests to make it harder for ad blockers to detect Mapp Intelligence track requests.",
-        "simpleValueType": true,
-        "name": "advancedRequestObfuscation",
-        "checkboxText": "Request Obfuscation",
-        "type": "CHECKBOX"
-      },
-      {
-        "help": "Check this box if you want to use the old Mapp Intelligence Ever ID. Highly recommended if you used Webtrek pixel V3, V4 or V5 / TI before.",
-        "simpleValueType": true,
-        "name": "advancedForceOldEverId",
-        "checkboxText": "Force Old EverID",
-        "type": "CHECKBOX"
-      },
-      {
-        "help": "Check this box if you want to send data tracked in a WebView of an app via the SDK. Please note that activating this feature can lead to a slightly increased security risk when exchanging data. This is because the pixel creates a data exchange to your Mapp Intelligence SDK (which you use to track the app) and does not send the data directly to your Mapp Intelligence account.",
-        "simpleValueType": true,
-        "name": "advancedSendViaSDK",
-        "checkboxText": "Send Via SDK",
-        "type": "CHECKBOX"
-      },
-      {
-        "type": "TEXT",
-        "name": "advancedOptOutName",
-        "displayName": "Opt-out cookie name",
-        "simpleValueType": true,
-        "help": "By default, if the user has a cookie named \u0027webtrekkOptOut\u0027, no trackrequest will be triggered. You can change the name of the cookie here.",
-        "valueHint": "webtrekkOptOut (String)"
-      }
-    ],
-    "enablingConditions": [
-      {
-        "paramName": "requestType",
-        "paramValue": "page",
-        "type": "EQUALS"
-      }
-    ]
-  },
-  {
     "type": "GROUP",
     "name": "trackGroup",
     "displayName": "Send trackrequest",
@@ -1553,6 +1527,147 @@ ___TEMPLATE_PARAMETERS___
         "checkboxText": "Activate logging",
         "type": "CHECKBOX",
         "displayName": "Log debug messages to console"
+      }
+    ]
+  },
+  {
+    "displayName": "Advanced (Deprecated)",
+    "name": "advanced",
+    "groupStyle": "ZIPPY_CLOSED",
+    "type": "GROUP",
+    "subParams": [
+      {
+        "type": "LABEL",
+        "name": "oldAdvancedDeprecationMessage",
+        "displayName": "Please do not use this to configure the pixel anymore. Please use the buttons \"Add Advanced Config Settings\" and \"Add GDPR Config Settings\" to configure Smartpixel. You can find those buttons on top of the template interface."
+      },
+      {
+        "displayName": "Request Queue Settings",
+        "name": "requestQueueGroup",
+        "groupStyle": "ZIPPY_CLOSED",
+        "type": "GROUP",
+        "subParams": [
+          {
+            "simpleValueType": true,
+            "name": "requestQueueActivated",
+            "checkboxText": "RequestQueue",
+            "type": "CHECKBOX"
+          },
+          {
+            "displayName": "Request interval (sec.)",
+            "simpleValueType": true,
+            "name": "requestQueueResendInterval",
+            "type": "TEXT"
+          },
+          {
+            "displayName": "Max. time in queue (sec.)",
+            "simpleValueType": true,
+            "name": "requestQueueTtl",
+            "type": "TEXT"
+          },
+          {
+            "displayName": "Max. number of requests",
+            "simpleValueType": true,
+            "name": "requestQueueSize",
+            "type": "TEXT"
+          }
+        ]
+      },
+      {
+        "type": "GROUP",
+        "name": "userIdentificationGroup",
+        "displayName": "User Identification Settings",
+        "groupStyle": "ZIPPY_CLOSED",
+        "subParams": [
+          {
+            "type": "CHECKBOX",
+            "name": "userIdentificationEnableOptOut",
+            "checkboxText": "Enable anonymised tracking",
+            "simpleValueType": true
+          },
+          {
+            "type": "CHECKBOX",
+            "name": "userIdentificationAnonymousOptIn",
+            "checkboxText": "Anonymous tracking as default setting",
+            "simpleValueType": true,
+            "enablingConditions": [
+              {
+                "paramName": "userIdentificationEnableOptOut",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "userIdentificationEnableOptOutOptOutCookieName",
+            "displayName": "Anonymised tracking cookie name",
+            "simpleValueType": true,
+            "enablingConditions": [
+              {
+                "paramName": "userIdentificationEnableOptOut",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ]
+          },
+          {
+            "type": "TEXT",
+            "name": "userIdentificationSuppressParameter",
+            "displayName": "Supress parameter",
+            "simpleValueType": true,
+            "enablingConditions": [
+              {
+                "paramName": "userIdentificationEnableOptOut",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "CHECKBOX",
+        "name": "requestLimitActivated",
+        "checkboxText": "Deactivate request limit cookie",
+        "simpleValueType": true
+      },
+      {
+        "simpleValueType": true,
+        "name": "advancedSecureCookie",
+        "checkboxText": "Secure Cookie",
+        "type": "CHECKBOX"
+      },
+      {
+        "simpleValueType": true,
+        "name": "advancedRequestObfuscation",
+        "checkboxText": "Request Obfuscation",
+        "type": "CHECKBOX"
+      },
+      {
+        "simpleValueType": true,
+        "name": "advancedForceOldEverId",
+        "checkboxText": "Force Old EverID",
+        "type": "CHECKBOX"
+      },
+      {
+        "simpleValueType": true,
+        "name": "advancedSendViaSDK",
+        "checkboxText": "Send Via SDK",
+        "type": "CHECKBOX"
+      },
+      {
+        "type": "TEXT",
+        "name": "advancedOptOutName",
+        "displayName": "Opt-out cookie name",
+        "simpleValueType": true
+      }
+    ],
+    "enablingConditions": [
+      {
+        "paramName": "requestType",
+        "paramValue": "page",
+        "type": "EQUALS"
       }
     ]
   }
@@ -1616,7 +1731,7 @@ const dataHandler_ = (root, propertyNames, inconsistencyFixer) => {
 };
 
 const runMapp = () => {
-    callInWindow('wtSmart._ps', 32, '1.0.11');
+    callInWindow('wtSmart._ps', 32, '1.1.0');
     if (data.requestType === 'page') {
         // Init
         /**
@@ -1634,8 +1749,6 @@ const runMapp = () => {
         dataHandler_('init', ['trackId', 'trackDomain'], initHandler_);
         // Advanced
         const advancedKeys = [
-            'execCDB',
-            'useCDBCache',
             'sendViaSDK',
             'optOutName',
             'forceOldEverId',
@@ -1670,6 +1783,33 @@ const runMapp = () => {
             callInWindow(method, config);
         };
         dataHandler_('advanced', advancedKeys, advancedHandler_);
+        // new Advanced
+        (()=>{
+             const c = {sendViaServer:{}, requestQueue: {}, requestLimit: {}, userIdentification: {}}; // new Advanced Config
+             const method = 'wtSmart.advanced.add';
+             let configArray = [];
+             if(data.advanced2) {
+                  configArray = data.advanced2;
+             }
+             if(data.gdpr) {
+                  configArray = configArray.concat(data.gdpr);
+             }
+             configArray.filter((c => {return c.parameter && c.hasOwnProperty("value");})).forEach((conf) => {
+                 if(conf.parameter.indexOf("_") === -1) {
+                     c[conf.parameter] = conf.value;
+                 } else {
+                    const keys = conf.parameter.split("_");
+                    c[keys[0]][keys[1]] = conf.value;
+                 }
+             });
+             // comma separated strings to array
+             c.useParamsForDefaultPageName = c.useParamsForDefaultPageName ? c.useParamsForDefaultPageName.split(',') : [];
+             c.userIdentification.suppressParameter = c.userIdentification.suppressParameter ? c.userIdentification.suppressParameter.split(',') : [];
+             c.sendViaServer.blacklist = c.sendViaServer.blacklist ? c.sendViaServer.blacklist.split(',') : [];
+             // advanced pixel call
+             log('Calling ' + method + ': ', c);
+             callInWindow(method, c);
+        })();
         // Page & Search
         dataHandler_('page', [
             'name',
