@@ -792,7 +792,7 @@ ___TEMPLATE_PARAMETERS___
             "name": "products",
             "displayName": "Product data",
             "simpleValueType": true,
-            "help": "Expects an array with product information. Each entry is an object that contains the following properties: \u003cbr /\u003e\n\u003cstrong\u003eid\u003c/strong\u003e: String, mandatory, product ID. \u003cbr /\u003e\n\u003cstrong\u003estatus\u003c/strong\u003e: String, optional, defaults to \"view\" (product is viewed). Other options: \"basket\" , \"list\"  and \"confirmation\" \u003cbr /\u003e\n\u003cstrong\u003ecost\u003c/strong\u003e: Number, optional, contains the product price (\"0\" prices are allowed). If you transfer a product more than once (quantity property greater than 1), use the total price instead of the unit price. \u003cbr /\u003e\n\u003cstrong\u003equantity\u003c/strong\u003e: Number, optional, amount of product items. \u003cbr /\u003e\n\u003cstrong\u003esoldOut\u003c/strong\u003e: Boolean, optional, tracks if the product is sold out. \u003cbr /\u003e\n\u003cstrong\u003evariant\u003c/strong\u003e: String, optional, product variant. \u003cbr /\u003e\n\u003cstrong\u003eparameter\u003c/strong\u003e: Object, optional, e-commerce parameters, where the key equals the ID of the parameter.\u003cbr /\u003e\n\u003cstrong\u003ecategory\u003c/strong\u003e: Object, optional, product category, where the key equals the ID of the parameter given in your account configuration.\u003cbr /\u003e\u003cbr /\u003e\n\u003cstrong\u003eExample:\u003c/strong\u003e \u003cbr /\u003e\n[{\u003cbr /\u003e\n   \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp id: \u0027ABC-123\u0027,\u003cbr /\u003e\n   \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp status: \u0027basket\u0027, \u003cbr /\u003e\n  \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp  cost: 99.90,\u003cbr /\u003e\n \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp   quantity: 2,\u003cbr /\u003e\n  \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp  soldOut: false,\u003cbr /\u003e\n \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp   variant: \u0027green\u0027,\u003cbr /\u003e\n\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp    parameter: {\u003cbr /\u003e\n    \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp    1: \u0027L\u0027\u003cbr /\u003e\n \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp   },\u003cbr /\u003e\n\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp    category: {\u003cbr /\u003e\n\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp        1: \u0027tops\u0027,\u003cbr /\u003e\n  \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp      2: \u0027noname\u0027\u003cbr /\u003e\n \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp   }\u003cbr /\u003e\n}]\u003cbr /\u003e",
+            "help": "Expects an array with product information. Each entry is an object that contains the following properties: \u003cbr /\u003e\n\u003cstrong\u003eid\u003c/strong\u003e: String, mandatory, product ID. \u003cbr /\u003e\n\u003cstrong\u003estatus\u003c/strong\u003e: String, optional, defaults to \"view\" (product is viewed). Other options: \"basket\" or \"addToCart\" , \"list\", \"confirmation\", \"deleteFromCart\", \"checkout\", \"addToWishlist\", \"deleteFromWishlist\". \u003cbr /\u003e\n\u003cstrong\u003ecost\u003c/strong\u003e: Number, optional, contains the product price (\"0\" prices are allowed). If you transfer a product more than once (quantity property greater than 1), use the total price instead of the unit price. \u003cbr /\u003e\n\u003cstrong\u003equantity\u003c/strong\u003e: Number, optional, amount of product items. \u003cbr /\u003e\n\u003cstrong\u003ecurrency\u003c/strong\u003e: String, optional, ISO 4217 currency code.\u003cbr /\u003e\n\u003cstrong\u003esoldOut\u003c/strong\u003e: Boolean, optional, tracks if the product is sold out. \u003cbr /\u003e\n\u003cstrong\u003evariant\u003c/strong\u003e: String, optional, product variant. \u003cbr /\u003e\n\u003cstrong\u003eparameter\u003c/strong\u003e: Object, optional, e-commerce parameters, where the key equals the ID of the parameter.\u003cbr /\u003e\n\u003cstrong\u003ecategory\u003c/strong\u003e: Object, optional, product category, where the key equals the ID of the parameter given in your account configuration.\u003cbr /\u003e\u003cbr /\u003e\n\u003cstrong\u003eExample:\u003c/strong\u003e \u003cbr /\u003e\n[{\u003cbr /\u003e\n   \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp id: \u0027ABC-123\u0027,\u003cbr /\u003e\n   \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp status: \u0027addToCart\u0027, \u003cbr /\u003e\n  \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp  cost: 99.90,\u003cbr /\u003e\n \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp   quantity: 2,\u003cbr /\u003e\n \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp   currency: \u0027EUR\u0027,\u003cbr /\u003e\n  \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp  soldOut: false,\u003cbr /\u003e\n \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp   variant: \u0027green\u0027,\u003cbr /\u003e\n\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp    parameter: {\u003cbr /\u003e\n    \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp    1: \u0027L\u0027\u003cbr /\u003e\n \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp   },\u003cbr /\u003e\n\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp    category: {\u003cbr /\u003e\n\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp        1: \u0027tops\u0027,\u003cbr /\u003e\n  \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp      2: \u0027noname\u0027\u003cbr /\u003e\n \u0026nbsp\u0026nbsp\u0026nbsp\u0026nbsp   }\u003cbr /\u003e\n}]\u003cbr /\u003e",
             "valueHint": "Object array"
           }
         ]
@@ -1731,7 +1731,7 @@ const dataHandler_ = (root, propertyNames, inconsistencyFixer) => {
 };
 
 const runMapp = () => {
-    callInWindow('wtSmart._ps', 32, '1.1.0');
+    callInWindow('wtSmart._ps', 32, '1.2.0');
     if (data.requestType === 'page') {
         // Init
         /**
@@ -1846,8 +1846,11 @@ const runMapp = () => {
         data.products.forEach(product => {
             const status = product.status ? product.status : 'view';
             const method = 'wtSmart.product.' + status + '.data.add';
-            log('Calling ' + method + ': ', [product]);
-            callInWindow(method, [product]);
+            const valids = ['view', 'basket', 'confirmation', 'list', 'addToBasket', 'removeFromBasket', 'checkout', 'addToWishlist', 'removeFromWishlist'];
+            if(valids.indexOf(status) !== -1) {
+                log('Calling ' + method + ': ', [product]);
+                callInWindow(method, [product]);         
+            }
         });
     }
     // campaign
@@ -3059,6 +3062,201 @@ ___WEB_PERMISSIONS___
                   {
                     "type": 1,
                     "string": "wtSmart._ps"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "wtSmart.product.addToCart.data.add"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "wtSmart.product.deleteFromCart.data.add"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "wtSmart.product.checkout.data.add"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "wtSmart.product.addToWishlist.data.add"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "wtSmart.product.deleteFromWishlist.data.add"
                   },
                   {
                     "type": 8,
