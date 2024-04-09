@@ -15,6 +15,8 @@
 homepage: "https://mapp.com"
 documentation: "https://docs.mapp.com/display/WIGT"
 versions:
+  - sha: 8d5082a85d67c4ea872ff875cd6ecd0c44401c96
+    changeNotes: fix delete product states
   - sha: 7428818a2ff784c569f9fee0897fb89307287d59
     changeNotes: new product status options and currency
   - sha: b9366a2c1400050f6dc29e540fd08c962db594e5
