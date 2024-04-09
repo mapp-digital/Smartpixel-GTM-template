@@ -1846,7 +1846,7 @@ const runMapp = () => {
         data.products.forEach(product => {
             const status = product.status ? product.status : 'view';
             const method = 'wtSmart.product.' + status + '.data.add';
-            const valids = ['view', 'basket', 'confirmation', 'list', 'addToBasket', 'removeFromBasket', 'checkout', 'addToWishlist', 'removeFromWishlist'];
+            const valids = ['view', 'basket', 'confirmation', 'list', 'addToBasket', 'deleteFromBasket', 'checkout', 'addToWishlist', 'deleteFromWishlist'];
             if(valids.indexOf(status) !== -1) {
                 log('Calling ' + method + ': ', [product]);
                 callInWindow(method, [product]);         
