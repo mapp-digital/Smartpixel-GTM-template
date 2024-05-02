@@ -15,6 +15,8 @@
 homepage: "https://mapp.com"
 documentation: "https://docs.mapp.com/display/WIGT"
 versions:
+  - sha: 8a60bf4cf9beefb09486c7fc0b28097c23a05993
+    changeNotes: productMerge available as option under advanced
   - sha: 2fefa146a588306ff4a0a7f200499dfd7fe72c4c
     changeNotes: add productMerge to advanced options
   - sha: d4a452de9e33e6218d3b76d647bc7179b22b71b2
