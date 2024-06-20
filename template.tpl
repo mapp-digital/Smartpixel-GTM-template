@@ -1121,7 +1121,7 @@ ___TEMPLATE_PARAMETERS___
       {
         "type": "CHECKBOX",
         "name": "overwriteCustomerValidation",
-        "checkboxText": "Safe predefined URM categories without validation",
+        "checkboxText": "Safe predefined User categories without validation",
         "simpleValueType": true,
         "help": "Activate this checkbox to automatically override the customer data saved in the Mapp Intelligence Database when sending predefined parameters. If you leave it unchecked, make sure to map \u0027true\u0027 to the respective validation field.",
         "defaultValue": true
@@ -1144,11 +1144,11 @@ ___TEMPLATE_PARAMETERS___
       {
         "type": "SIMPLE_TABLE",
         "name": "customerPredefined",
-        "displayName": "Predefined URM category",
+        "displayName": "Predefined User category",
         "simpleTableColumns": [
           {
             "defaultValue": "",
-            "displayName": "URM key",
+            "displayName": "User key",
             "name": "id",
             "type": "SELECT",
             "selectItems": [
@@ -1201,23 +1201,23 @@ ___TEMPLATE_PARAMETERS___
           },
           {
             "defaultValue": "",
-            "displayName": "URM value",
+            "displayName": "User value",
             "name": "value",
             "type": "TEXT",
             "valueHint": "String"
           }
         ],
         "help": "\u003cstrong\u003eemail:\u003c/strong\u003e Use this to transmit the e-mail address of a user. Will not be hashed by the pixel. (String)\u003cbr\u003e \u003cstrong\u003eemailRID:\u003c/strong\u003e Use this to transmit the e-mail receiver ID of the user. (String)\u003cbr\u003e \u003cstrong\u003eemailOptin:\u003c/strong\u003e Use this to transmit the e-mail optin status of the user. (Boolean)\u003cbr\u003e \u003cstrong\u003efirstName:\u003c/strong\u003e Use this to transmit the first name of the user. (String)\u003cbr\u003e \u003cstrong\u003elastName:\u003c/strong\u003e Use this to transmit the last name of the user. (String)\u003cbr\u003e \u003cstrong\u003etelephone:\u003c/strong\u003e Use this to transmit the telephone number of the user. (String)\u003cbr\u003e \u003cstrong\u003egender:\u003c/strong\u003e Use this to transmit the gender of the user (1 \u003d male | 2 \u003d female). (Number)\u003cbr\u003e \u003cstrong\u003ebirthday:\u003c/strong\u003e Use this to transmit the user\u0027s date of birth (YYYYMMDD). (String)\u003cbr\u003e \u003cstrong\u003ecountry:\u003c/strong\u003e Use this to transmit the country of the user. (String)\u003cbr\u003e \u003cstrong\u003ecity:\u003c/strong\u003e Use this to transmit the city of the user. (String)\u003cbr\u003e \u003cstrong\u003estreet:\u003c/strong\u003e Use this to transmit the street of the user. (String)\u003cbr\u003e \u003cstrong\u003estreetNumber:\u003c/strong\u003e Use this to transmit the street number of the user. (String)\u003cbr\u003e\u003cbr\u003e\nYou have to configured this Categories in Mapp Intelligence.",
-        "newRowButtonText": "Add predefined URM category"
+        "newRowButtonText": "Add predefined User category"
       },
       {
         "type": "SIMPLE_TABLE",
         "name": "customerCategory",
-        "displayName": "URM category",
+        "displayName": "User category",
         "simpleTableColumns": [
           {
             "defaultValue": "",
-            "displayName": "URM category ID",
+            "displayName": "User category ID",
             "name": "id",
             "type": "TEXT",
             "valueHint": "Positive integer",
@@ -1229,14 +1229,14 @@ ___TEMPLATE_PARAMETERS___
           },
           {
             "defaultValue": "",
-            "displayName": "URM category value",
+            "displayName": "User category value",
             "name": "value",
             "type": "TEXT",
             "valueHint": "String"
           }
         ],
-        "help": "Please enter your URM categories as configured in your account. The category ID is the ID given in your account configuration.",
-        "newRowButtonText": "Add URM category"
+        "help": "Please enter your User categories as configured in your account. The category ID is the ID given in your account configuration.",
+        "newRowButtonText": "Add User category"
       }
     ]
   },
