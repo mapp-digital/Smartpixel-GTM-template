@@ -10,7 +10,7 @@ ___INFO___
 
 {
   "displayName": "Mapp Cloud Tracking",
-  "description": "Initialise and configure tracking for Mapp Intelligence and Mapp Acquire.",
+  "description": "Initialise and configure tracking for Mapp Intelligence.",
   "categories": [
     "ANALYTICS",
     "CONVERSIONS",
@@ -161,8 +161,24 @@ ___TEMPLATE_PARAMETERS___
             "displayValue": "secureCookie"
           },
           {
+            "value": "productMerge",
+            "displayValue": "productMerge"
+          },
+          {
+            "value": "registerObfuscation",
+            "displayValue": "registerObfuscation"
+          },
+          {
             "value": "requestObfuscation",
             "displayValue": "requestObfuscation"
+          },
+          {
+            "value": "tabBrowsing",
+            "displayValue": "tabBrowsing"
+          },
+          {
+            "value": "preRendering",
+            "displayValue": "preRendering"
           },
           {
             "value": "forceOldEverId",
@@ -171,10 +187,6 @@ ___TEMPLATE_PARAMETERS___
           {
             "value": "sendViaSDK",
             "displayValue": "sendViaSDK"
-          },
-          {
-            "value": "productMerge",
-            "displayValue": "productMerge"
           },
           {
             "value": "requestQueue_activated",
@@ -250,7 +262,7 @@ ___TEMPLATE_PARAMETERS___
       }
     ],
     "newRowButtonText": "Add Advanced Config Setting",
-    "help": "Find more information about each setting here: \u003ca href\u003d\"https://documentation.mapp.com/1.0/en/advanced-15741253.html\" target\u003d\"_blank\"\u003eSmartpixel Advanced Settings\u003c/a\u003e\u003c/br\u003e\u003c/br\u003e\nsecureCookie: true, false\u003c/br\u003e\nproductMerge: true, false\u003c/br\u003e\nrequestObfuscation: true, false\u003c/br\u003e\nforceOldEverId: true, false\u003c/br\u003e\nrequestQueue.activated: true, false\u003c/br\u003e\nrequestQueue.ttl: number (seconds)\u003c/br\u003e\nrequestQueue.resendInterval: number (milliseconds)\u003c/br\u003e\nrequestQueue.size: number\u003c/br\u003e\nrequestQueue.retries: number\u003c/br\u003e\nrequestQueue.retriesOption: 1,2\u003c/br\u003e\nsendViaSDK: true, false\u003c/br\u003e\nsendViaServer.activated: true, false\u003c/br\u003e\nsendViaServer.serverDomain: string\u003c/br\u003e\nsendViaServer.serverPath: string\u003c/br\u003e\nsendViaServer.droppedRequests: 0,1,2,3\u003c/br\u003e\nsendViaServer.blacklist: string1,string2,string3\u003c/br\u003e\nuseHashForDefaultPageName: true, false\u003c/br\u003e\nuseParamsForDefaultPageName: string1,string2,string3\u003c/br\u003e\nrequestLimit.activated: true, false\u003c/br\u003e\nrequestLimit.amount: number\u003c/br\u003e\nrequestLimit.duration: number (seconds)",
+    "help": "Find more information about each setting here: \u003ca href\u003d\"https://documentation.mapp.com/1.0/en/advanced-15741253.html\" target\u003d\"_blank\"\u003eSmartpixel Advanced Settings\u003c/a\u003e\u003c/br\u003e\u003c/br\u003e\nsecureCookie: true, false\u003c/br\u003e\nproductMerge: true, false\u003c/br\u003e\nregisterObfuscation: true, false\u003c/br\u003e\nrequestObfuscation: true, false\u003c/br\u003e\ntabBrowsing: true, false\u003c/br\u003e\npreRendering: true, false\u003c/br\u003e\nforceOldEverId: true, false\u003c/br\u003e\nrequestQueue.activated: true, false\u003c/br\u003e\nrequestQueue.ttl: number (seconds)\u003c/br\u003e\nrequestQueue.resendInterval: number (milliseconds)\u003c/br\u003e\nrequestQueue.size: number\u003c/br\u003e\nrequestQueue.retries: number\u003c/br\u003e\nrequestQueue.retriesOption: 1,2\u003c/br\u003e\nsendViaSDK: true, false\u003c/br\u003e\nsendViaServer.activated: true, false\u003c/br\u003e\nsendViaServer.serverDomain: string\u003c/br\u003e\nsendViaServer.serverPath: string\u003c/br\u003e\nsendViaServer.droppedRequests: 0,1,2,3\u003c/br\u003e\nsendViaServer.blacklist: string1,string2,string3\u003c/br\u003e\nuseHashForDefaultPageName: true, false\u003c/br\u003e\nuseParamsForDefaultPageName: string1,string2,string3\u003c/br\u003e\nrequestLimit.activated: true, false\u003c/br\u003e\nrequestLimit.amount: number\u003c/br\u003e\nrequestLimit.duration: number (seconds)",
     "enablingConditions": [
       {
         "paramName": "requestType",
@@ -388,13 +400,13 @@ ___TEMPLATE_PARAMETERS___
   {
     "type": "GROUP",
     "name": "extensionActionGroup",
-    "displayName": "Automatic tracking of HTML links",
+    "displayName": "Automatic tracking of HTML element click events",
     "groupStyle": "ZIPPY_CLOSED",
     "subParams": [
       {
         "type": "LABEL",
         "name": "extensionActionDescription",
-        "displayName": "HTML links can be tracked automatically. \u003cbr\u003e\u003cbr\u003eHint: If links are added to the page after this tag is executed, you can mark them by adding another instance of the Mapp Intelligence Smartpixel tag and the \u0027event\u0027 setting. You\u0027ll find a \u0027reload\u0027 checkbox here then. \u003cbr\u003e",
+        "displayName": "Clicks on HTML elements can be tracked automatically. \u003cbr\u003e\u003cbr\u003eHint: If Shadow DOM elements are added to the page after this tag is executed, you can mark them by adding another instance of the Mapp Intelligence Smartpixel tag and the \u0027event\u0027 setting. You\u0027ll find a \u0027reload\u0027 checkbox here then. \u003cbr\u003e",
         "enablingConditions": [
           {
             "paramName": "requestType",
@@ -437,16 +449,20 @@ ___TEMPLATE_PARAMETERS___
         "radioItems": [
           {
             "value": "link",
-            "displayValue": "Link (Automatic naming)",
+            "displayValue": "Link (Automatic naming of href elements)",
             "help": ""
           },
           {
             "value": "standard",
-            "displayValue": "Standard (Manual naming)"
+            "displayValue": "Standard (Manual naming of href elements)"
+          },
+          {
+            "value": "advanced",
+            "displayValue": "Advanced (Tracking of any HTML element)"
           }
         ],
         "simpleValueType": true,
-        "help": "\u003cb\u003eLink\u003c/b\u003e\u003cbr\u003e \n\u003cul\u003e\n\u003cli\u003eAll HTML-links are tracked. \u003c/li\u003e\n\u003cli\u003eUses the target URL of the link elements (href) as name, minus \"http(s)\" and possible URL parameters or anchors. \u003c/li\u003e\n\u003cli\u003eYou can add individual information and make the link name unique by using the value of the \"Link marking attribute\". It will be used as prefix, if it is available in the element.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cb\u003eStandard\u003c/b\u003e\n\u003cul\u003e\u003cli\u003eOnly links that have the selected \"Link marking attribute\" are tracked. \u003c/li\u003e\n\u003cli\u003e The value of the attribute is used as the event name. \u003c/li\u003e\n\u003c/ul\u003e",
+        "help": "\u003cb\u003eLink\u003c/b\u003e\u003cbr\u003e \n\u003cul\u003e\n\u003cli\u003eAll HTML-links are tracked. \u003c/li\u003e\n\u003cli\u003eUses the target URL of the link elements (href) as name, minus \"http(s)\" and possible URL parameters or anchors. \u003c/li\u003e\n\u003cli\u003eYou can add individual information and make the link name unique by using the value of the \"Link marking attribute\". It will be used as prefix, if it is available in the element.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cb\u003eStandard\u003c/b\u003e\n\u003cul\u003e\u003cli\u003eOnly links that have the selected \"Link marking attribute\" are tracked. \u003c/li\u003e\n\u003cli\u003e The value of the attribute is used as the event name. \u003c/li\u003e\n\u003c/ul\u003e\n\u003cb\u003eAdvanced\u003c/b\u003e\n\u003cul\u003e\u003cli\u003eAll HTML elements on a page can be tracked. \u003c/li\u003e\n\u003cli\u003eElements need to be specified with a CSS selector. \u003c/li\u003e\n\u003cli\u003eEvent name can be either set via an attribute or as a fixed value, or a combination of both. \u003c/li\u003e\n\u003c/ul\u003e",
         "enablingConditions": [
           {
             "paramName": "extensionActionActivate",
@@ -463,8 +479,8 @@ ___TEMPLATE_PARAMETERS___
         "help": "Enter the attribute to be used to mark a link here. Default is \u0027data-name\u0027.",
         "enablingConditions": [
           {
-            "paramName": "extensionActionActivate",
-            "paramValue": true,
+            "paramName": "extensionActionType",
+            "paramValue": "standard",
             "type": "EQUALS"
           }
         ],
@@ -493,6 +509,22 @@ ___TEMPLATE_PARAMETERS___
             "errorMessage": "Please delete all whitespaces"
           }
         ]
+      },
+      {
+        "type": "TEXT",
+        "name": "extensionActionAdvanced",
+        "displayName": "Selector and event name configuration",
+        "simpleValueType": true,
+        "help": "Map this input to a GTM Custom JavaScript variable, which contains the configuration of the selectors and event names. You need to define an array of objects containing the following information:\u003cbr\u003e\n\u003cstrong\u003eselector:\u003c/strong\u003e CSS selector used to specify the element to be tracked (e.g. button[name]).\u003cbr\u003e\n\u003cstrong\u003eeventName:\u003c/strong\u003e Used as event name in Intelligence. It is possible to use a fixed value as well as a value from an attribute. Attributes need to be marked with \"${}\". Values can also be concatenated (e.g. ${name}_fix_${class}). Default value for event name is \"noEventNameGiven\".\u003cbr\u003e\nHere is an example for the GTM Custom JS variable setup:\u003cbr\u003e\u003cbr/\u003e\nfunction() {\u003cbr/\u003e\n\u0026emsp; switch ( {{ Page URL }} ) {\u003cbr/\u003e\n\u0026emsp;\u0026emsp; case \"https://my-url-with-links.com\": \u003cbr/\u003e\n\u0026emsp;\u0026emsp;\u0026emsp; return [\u003cbr/\u003e\n\u0026emsp;\u0026emsp; \u0026emsp;\u0026emsp; {\u003cbr/\u003e\n\u0026emsp;\u0026emsp; \u0026emsp;\u0026emsp; \u0026emsp; selector: \u0027a\u0027,\u003cbr/\u003e\n\u0026emsp;\u0026emsp; \u0026emsp;\u0026emsp; \u0026emsp; eventName:\u0027${href}_fix_${data-foo}\u0027\u003cbr/\u003e\n\u0026emsp;\u0026emsp; \u0026emsp;\u0026emsp; }\u003cbr/\u003e\n\u0026emsp;\u0026emsp; \u0026emsp; ]\u003cbr/\u003e\n\u0026emsp;\u0026emsp;  default:\u003cbr/\u003e\n\u0026emsp;\u0026emsp;\u0026emsp; return [\u003cbr/\u003e\n\u0026emsp;\u0026emsp;\u0026emsp;\u0026emsp; {\u003cbr/\u003e\n\u0026emsp;\u0026emsp;\u0026emsp;\u0026emsp;\u0026emsp; selector: \u0027button[data-a]\u0027,\u003cbr/\u003e\n\u0026emsp;\u0026emsp;\u0026emsp;\u0026emsp;\u0026emsp; eventName: \u0027${data-a}_fix_${data-foo}\u0027\u003cbr/\u003e\n\u0026emsp;\u0026emsp;\u0026emsp;\u0026emsp; },\u003cbr/\u003e\n\u0026emsp;\u0026emsp;\u0026emsp;\u0026emsp; {\u003cbr/\u003e\n\u0026emsp;\u0026emsp;\u0026emsp;\u0026emsp;\u0026emsp; selector: \u0027button[data-b]\u0027,\u003cbr/\u003e\n\u0026emsp;\u0026emsp;\u0026emsp;\u0026emsp;\u0026emsp; eventName: \u0027${data-b}.${data-bar}\u0027 \u003cbr/\u003e\n\u0026emsp;\u0026emsp;\u0026emsp;\u0026emsp; }\u003cbr/\u003e\n\u0026emsp;\u0026emsp;\u0026emsp; ]\u003cbr/\u003e\n\u0026emsp; }\u003cbr/\u003e\n}\u003cbr/\u003e\u003cbr/\u003e\nOf course you can replace the Page URL GTM variable with any other you want. If the configuration is the same for every page you can leave out the switch statement altogether and just return the array with the config array.",
+        "enablingConditions": [
+          {
+            "paramName": "extensionActionType",
+            "paramValue": "advanced",
+            "type": "EQUALS"
+          }
+        ],
+        "valueHint": "GTM Custom JavaScript variable",
+        "valueValidators": []
       },
       {
         "type": "CHECKBOX",
@@ -1771,7 +1803,7 @@ const dataHandler_ = (root, propertyNames, inconsistencyFixer) => {
 };
 
 const runMapp = () => {
-    callInWindow('wtSmart._ps', 32, '1.2.0');
+    callInWindow('wtSmart._ps', 32, '1.3.0');
     if (data.requestType === 'page') {
         // Init
         /**
@@ -1922,7 +1954,7 @@ const runMapp = () => {
             callInWindow('wtSmart.extension.action.activate');
             log('Automatic linktracking activated');
         };
-        const actionExtensionParameter_ = ['type', 'attribute', 'parameter', 'withHash', 'delay', 'noDelayAttribute', 'ignore', 'replace'];
+        const actionExtensionParameter_ = ['type', 'advanced', 'attribute', 'parameter', 'withHash', 'delay', 'noDelayAttribute', 'ignore', 'replace'];
         dataHandler_('extensionAction', actionExtensionParameter_, extensionActionHandler_);
     }
 
@@ -3375,17 +3407,18 @@ scenarios:
         debugLog(calls);
     }
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(2);
+    assertThat(calls.length).isEqualTo(4);
+
 
     calls.forEach((call, index) => {
         switch (index) {
-            case 0:
+            case 1:
                 is(call, 'method', 'wtSmart.init.add');
                 is(call, 'config.trackDomain', 'track.mapp.com');
                 is(call, 'config.cookie', '1');
                 is(call, 'config.domain', ['test.de', 'bla.com']);
                 break;
-            case 1:
+            case 3:
                 is(call, 'method', 'wtSmart.track');
                 is(call, 'config', false);
                 break;
@@ -3399,7 +3432,6 @@ scenarios:
         requestType: 'page',
         keepData: false,
         track: 'track',
-        advancedExecCDB: true,
         advancedForceOldEverId: true,
         advancedOptOutName: 'customCookieName',
         advancedRequestObfuscation: false,
@@ -3423,19 +3455,17 @@ scenarios:
         debugLog(calls);
     }
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(2);
+    assertThat(calls.length).isEqualTo(4);
 
     calls.forEach((call, index) => {
         switch (index) {
-            case 0:
+            case 1:
                 is(call, 'method', 'wtSmart.advanced.add');
-                is(call, 'config.execCDB', true);
                 is(call, 'config.forceOldEverId', true);
                 is(call, 'config.optOutName', 'customCookieName');
                 is(call, 'config.requestObfuscation', false);
                 is(call, 'config.secureCookie', true);
                 is(call, 'config.sendViaSDK', false);
-                is(call, 'config.useCDBCache', false);
                 is(call, 'config.useHashForDefaultPageName', true);
                 is(call, 'config.requestQueue.activated', true);
                 is(call, 'config.requestQueue.resendInterval', 7000);
@@ -3447,7 +3477,7 @@ scenarios:
                 is(call, 'config.userIdentification.optOutCookieName', 'testcookie1234');
                 is(call, 'config.userIdentification.suppressParameter', ['uc5', 'uc7', 'cd']);
                 break;
-            case 1:
+            case 3:
                 is(call, 'method', 'wtSmart.track');
                 is(call, 'config', false);
                 break;
@@ -3506,11 +3536,11 @@ scenarios:
         debugLog(calls);
     }
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(2);
+    assertThat(calls.length).isEqualTo(4);
 
     calls.forEach((call, index) => {
         switch (index) {
-            case 0:
+            case 2:
                 is(call, 'method', 'wtSmart.page.data.add');
                 is(call, 'config.name', 'pagename');
                 is(call, 'config.category.43', 'pagecategory 43');
@@ -3530,7 +3560,7 @@ scenarios:
                 is(call, 'config.testVariant', 'testVariant value');
                 is(call, 'config.testExperiment', 'testExperiment value');
                 break;
-            case 1:
+            case 3:
                 is(call, 'method', 'wtSmart.track');
                 is(call, 'config', false);
                 break;
@@ -3562,17 +3592,17 @@ scenarios:
         debugLog(calls);
     }
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(2);
+    assertThat(calls.length).isEqualTo(4);
 
     calls.forEach((call, index) => {
         switch (index) {
-            case 0:
+            case 2:
                 is(call, 'method', 'wtSmart.session.data.add');
                 is(call, 'config.loginStatus', 'logged in');
                 is(call, 'config.parameter.2', 'sessionparameter 2');
                 is(call, 'config.parameter.3', 'sessionparameter 3');
                 break;
-            case 1:
+            case 3:
                 is(call, 'method', 'wtSmart.track');
                 is(call, 'config', false);
                 break;
@@ -3619,11 +3649,11 @@ scenarios:
         debugLog(calls);
     }
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(2);
+    assertThat(calls.length).isEqualTo(4);
 
     calls.forEach((call, index) => {
         switch (index) {
-            case 0:
+            case 2:
                 is(call, 'method', 'wtSmart.customer.data.add');
                 is(call, 'config.id', 'abc@def.de');
                 is(call, 'config.validation', true);
@@ -3642,7 +3672,7 @@ scenarios:
                 is(call, 'config.street', 'street value');
                 is(call, 'config.streetNumber', 'streetNumber value');
                 break;
-            case 1:
+            case 3:
                 is(call, 'method', 'wtSmart.track');
                 is(call, 'config', false);
                 break;
@@ -3676,18 +3706,18 @@ scenarios:
         debugLog(calls);
     }
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(2);
+    assertThat(calls.length).isEqualTo(4);
 
     calls.forEach((call, index) => {
         switch (index) {
-            case 0:
+            case 2:
                 is(call, 'method', 'wtSmart.campaign.data.add');
                 is(call, 'config.id', 'wt_mc%3Dtest.blah.foo.bar');
                 is(call, 'config.oncePerSession', true);
                 is(call, 'config.parameter.43', 'campaignParameter 43');
                 is(call, 'config.parameter.44', 'campaignParameter 44');
                 break;
-            case 1:
+            case 3:
                 is(call, 'method', 'wtSmart.track');
                 is(call, 'config', false);
                 break;
@@ -3768,11 +3798,11 @@ scenarios:
         debugLog(calls);
     }
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(6);
+    assertThat(calls.length).isEqualTo(8);
 
     calls.forEach((call, index) => {
         switch (index) {
-            case 0:
+            case 2:
                 is(call, 'method', 'wtSmart.order.data.add');
                 is(call, 'config.id', 'orderId');
                 is(call, 'config.parameter.2', 'ecommerceparameter 2');
@@ -3786,7 +3816,7 @@ scenarios:
                 is(call, 'config.grossMargin', 'grossMargin value');
                 is(call, 'config.orderStatus', 'orderStatus value');
                 break;
-            case 1:
+            case 3:
                 is(call, 'method', 'wtSmart.product.view.data.add');
                 is(call, 'config.0.category.1', 'Category A');
                 is(call, 'config.0.cost', '11.95');
@@ -3796,7 +3826,7 @@ scenarios:
                 is(call, 'config.0.status', 'view');
                 is(call, 'config.0.variant', 'Variant A');
                 break;
-            case 2:
+            case 4:
                 is(call, 'method', 'wtSmart.product.list.data.add');
                 is(call, 'config.0.category.1', 'Category B');
                 is(call, 'config.0.cost', '99.99');
@@ -3806,7 +3836,7 @@ scenarios:
                 is(call, 'config.0.status', 'list');
                 is(call, 'config.0.variant', 'Variant B');
                 break;
-            case 3:
+            case 5:
                 is(call, 'method', 'wtSmart.product.basket.data.add');
                 is(call, 'config.0.category.1', 'Category C');
                 is(call, 'config.0.cost', '22.99');
@@ -3816,7 +3846,7 @@ scenarios:
                 is(call, 'config.0.status', 'basket');
                 is(call, 'config.0.variant', 'Variant C');
                 break;
-            case 4:
+            case 6:
                 is(call, 'method', 'wtSmart.product.confirmation.data.add');
                 is(call, 'config.0.category.1', 'Category D');
                 is(call, 'config.0.cost', '33.99');
@@ -3826,7 +3856,7 @@ scenarios:
                 is(call, 'config.0.status', 'confirmation');
                 is(call, 'config.0.variant', 'Variant D');
                 break;
-            case 5:
+            case 7:
                 is(call, 'method', 'wtSmart.track');
                 is(call, 'config', false);
                 break;
@@ -3868,11 +3898,11 @@ scenarios:
         debugLog(calls);
     }
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(2);
+    assertThat(calls.length).isEqualTo(3);
 
     calls.forEach((call, index) => {
         switch (index) {
-            case 0:
+            case 1:
                 is(call, 'method', 'wtSmart.action.data.add');
                 is(call, 'config.name', 'eventValue');
                 is(call, 'config.parameter.2', 'actionparameter 2');
@@ -3880,7 +3910,7 @@ scenarios:
                 is(call, 'config.goal.2', 'actionGoal 2');
                 is(call, 'config.goal.3', 'actionGoal 3');
                 break;
-            case 1:
+            case 2:
                 is(call, 'method', 'wtSmart.track');
                 is(call, 'config', false);
                 break;
@@ -3919,11 +3949,11 @@ scenarios:
         debugLog(calls);
     }
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(3);
+    assertThat(calls.length).isEqualTo(5);
 
     calls.forEach((call, index) => {
         switch (index) {
-            case 0:
+            case 2:
                 is(call, 'method', 'wtSmart.extension.action.config');
                 is(call, 'config.type', 'standard');
                 is(call, 'config.attribute', 'mapp-data');
@@ -3935,10 +3965,10 @@ scenarios:
                 is(call, 'config.extend', ['para1', 'para2']);
                 is(call, 'config.delayDuration', '300');
                 break;
-            case 1:
+            case 3:
                 is(call, 'method', 'wtSmart.extension.action.activate');
                 break;
-            case 2:
+            case 4:
                 is(call, 'method', 'wtSmart.track');
                 is(call, 'config', false);
                 break;
@@ -3974,11 +4004,11 @@ scenarios:
         debugLog(calls);
     }
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(2);
+    assertThat(calls.length).isEqualTo(4);
 
     calls.forEach((call, index) => {
         switch (index) {
-            case 0:
+            case 2:
                 is(call, 'method', 'wtSmart.extension.form.config');
                 is(call, 'config.automatic', 'myform');
                 is(call, 'config.attribute', 'foo');
@@ -3989,7 +4019,7 @@ scenarios:
                 is(call, 'config.field.value', 'value');
                 is(call, 'config.field.defaults', {defaultFoo: 'defaultBar'});
                 break;
-            case 2:
+            case 3:
                 is(call, 'method', 'wtSmart.track');
                 is(call, 'config', false);
                 break;
@@ -4012,17 +4042,17 @@ scenarios:
         debugLog(calls);
     }
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(3);
+    assertThat(calls.length).isEqualTo(4);
 
     calls.forEach((call, index) => {
         switch (index) {
-            case 0:
+            case 1:
                 is(call, 'method', 'wtSmart.extension.action.reload');
                 break;
-            case 1:
+            case 2:
                 is(call, 'method', 'wtSmart.extension.form.update');
                 break;
-            case 2:
+            case 3:
                 is(call, 'method', 'wtSmart.track');
                 is(call, 'config', false);
                 break;
@@ -4040,13 +4070,11 @@ scenarios:
         initTrackId: '111111111111111',
         initDomain: 'test.de,bla.com',
         cookie: '1',
-        advancedExecCDB: true,
         advancedForceOldEverId: true,
         advancedOptOutName: 'customCookieName',
         advancedRequestObfuscation: false,
         advancedSecureCookie: true,
         advancedSendViaSDK: false,
-        advancedUseCDBCache: false,
         advancedUseHashForDefaultPageName: true,
         requestQueueActivated: true,
         requestQueueResendInterval: '7',
@@ -4242,25 +4270,23 @@ scenarios:
         debugLog(calls);
     }
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(15);
+    assertThat(calls.length).isEqualTo(17);
 
     calls.forEach((call, index) => {
         switch (index) {
-            case 0:
+            case 1:
                 is(call, 'method', 'wtSmart.init.add');
                 is(call, 'config.trackDomain', 'track.mapp.com');
                 is(call, 'config.cookie', '1');
                 is(call, 'config.domain', ['test.de', 'bla.com']);
                 break;
-            case 1:
+            case 2:
                 is(call, 'method', 'wtSmart.advanced.add');
-                is(call, 'config.execCDB', true);
                 is(call, 'config.forceOldEverId', true);
                 is(call, 'config.optOutName', 'customCookieName');
                 is(call, 'config.requestObfuscation', false);
                 is(call, 'config.secureCookie', true);
                 is(call, 'config.sendViaSDK', false);
-                is(call, 'config.useCDBCache', false);
                 is(call, 'config.useHashForDefaultPageName', true);
                 is(call, 'config.requestQueue.activated', true);
                 is(call, 'config.requestQueue.resendInterval', 7000);
@@ -4272,7 +4298,7 @@ scenarios:
                 is(call, 'config.userIdentification.optOutCookieName', 'testcookie1234');
                 is(call, 'config.userIdentification.suppressParameter', ['uc5', 'uc7', 'cd']);
                 break;
-            case 2:
+            case 4:
                 is(call, 'method', 'wtSmart.page.data.add');
                 is(call, 'config.name', 'pagename');
                 is(call, 'config.category.43', 'pagecategory 43');
@@ -4292,7 +4318,7 @@ scenarios:
                 is(call, 'config.testVariant', 'testVariant value');
                 is(call, 'config.testExperiment', 'testExperiment value');
                 break;
-            case 3:
+            case 5:
                 is(call, 'method', 'wtSmart.order.data.add');
                 is(call, 'config.id', 'orderId');
                 is(call, 'config.parameter.2', 'ecommerceparameter 2');
@@ -4306,7 +4332,7 @@ scenarios:
                 is(call, 'config.grossMargin', 'grossMargin value');
                 is(call, 'config.orderStatus', 'orderStatus value');
                 break;
-            case 4:
+            case 6:
                 is(call, 'method', 'wtSmart.product.view.data.add');
                 is(call, 'config.0.category.1', 'Category A');
                 is(call, 'config.0.cost', '11.95');
@@ -4316,7 +4342,7 @@ scenarios:
                 is(call, 'config.0.status', 'view');
                 is(call, 'config.0.variant', 'Variant A');
                 break;
-            case 5:
+            case 7:
                 is(call, 'method', 'wtSmart.product.list.data.add');
                 is(call, 'config.0.category.1', 'Category B');
                 is(call, 'config.0.cost', '99.99');
@@ -4326,7 +4352,7 @@ scenarios:
                 is(call, 'config.0.status', 'list');
                 is(call, 'config.0.variant', 'Variant B');
                 break;
-            case 6:
+            case 8:
                 is(call, 'method', 'wtSmart.product.basket.data.add');
                 is(call, 'config.0.category.1', 'Category C');
                 is(call, 'config.0.cost', '22.99');
@@ -4336,7 +4362,7 @@ scenarios:
                 is(call, 'config.0.status', 'basket');
                 is(call, 'config.0.variant', 'Variant C');
                 break;
-            case 7:
+            case 9:
                 is(call, 'method', 'wtSmart.product.confirmation.data.add');
                 is(call, 'config.0.category.1', 'Category D');
                 is(call, 'config.0.cost', '33.99');
@@ -4346,20 +4372,20 @@ scenarios:
                 is(call, 'config.0.status', 'confirmation');
                 is(call, 'config.0.variant', 'Variant D');
                 break;
-            case 8:
+            case 10:
                 is(call, 'method', 'wtSmart.campaign.data.add');
                 is(call, 'config.id', 'wt_mc%3Dtest.blah.foo.bar');
                 is(call, 'config.oncePerSession', true);
                 is(call, 'config.parameter.43', 'campaignParameter 43');
                 is(call, 'config.parameter.44', 'campaignParameter 44');
                 break;
-            case 9:
+            case 11:
                 is(call, 'method', 'wtSmart.session.data.add');
                 is(call, 'config.loginStatus', 'logged in');
                 is(call, 'config.parameter.2', 'sessionparameter 2');
                 is(call, 'config.parameter.3', 'sessionparameter 3');
                 break;
-            case 10:
+            case 12:
                 is(call, 'method', 'wtSmart.customer.data.add');
                 is(call, 'config.id', 'abc@def.de');
                 is(call, 'config.validation', true);
@@ -4378,7 +4404,7 @@ scenarios:
                 is(call, 'config.street', 'street value');
                 is(call, 'config.streetNumber', 'streetNumber value');
                 break;
-            case 11:
+            case 13:
                 is(call, 'method', 'wtSmart.extension.action.config');
                 is(call, 'config.type', 'standard');
                 is(call, 'config.attribute', 'mapp-data');
@@ -4390,10 +4416,10 @@ scenarios:
                 is(call, 'config.extend', ['para1', 'para2']);
                 is(call, 'config.delayDuration', '300');
                 break;
-            case 12:
+            case 14:
                 is(call, 'method', 'wtSmart.extension.action.activate');
                 break;
-            case 13:
+            case 15:
                 is(call, 'method', 'wtSmart.extension.form.config');
                 is(call, 'config.automatic', 'myform');
                 is(call, 'config.attribute', 'foo');
@@ -4404,7 +4430,7 @@ scenarios:
                 is(call, 'config.field.value', 'value');
                 is(call, 'config.field.defaults', {defaultFoo: 'defaultBar'});
                 break;
-            case 14:
+            case 16:
                 is(call, 'method', 'wtSmart.track');
                 is(call, 'config', false);
                 break;
@@ -4496,11 +4522,11 @@ scenarios:
         debugLog(calls);
     }
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(7);
+    assertThat(calls.length).isEqualTo(8);
 
     calls.forEach((call, index) => {
         switch (index) {
-            case 0:
+            case 1:
                 is(call, 'method', 'wtSmart.action.data.add');
                 is(call, 'config.name', 'eventValue');
                 is(call, 'config.parameter.2', 'actionparameter 2');
@@ -4508,26 +4534,26 @@ scenarios:
                 is(call, 'config.goal.2', 'actionGoal 2');
                 is(call, 'config.goal.3', 'actionGoal 3');
                 break;
-            case 1:
+            case 2:
                 is(call, 'method', 'wtSmart.extension.action.reload');
                 break;
-            case 2:
+            case 3:
                 is(call, 'method', 'wtSmart.extension.form.update');
                 break;
-            case 3:
+            case 4:
                 is(call, 'method', 'wtSmart.campaign.data.add');
                 is(call, 'config.id', 'wt_mc%3Dtest.blah.foo.bar');
                 is(call, 'config.oncePerSession', true);
                 is(call, 'config.parameter.43', 'campaignParameter 43');
                 is(call, 'config.parameter.44', 'campaignParameter 44');
                 break;
-            case 4:
+            case 5:
                 is(call, 'method', 'wtSmart.session.data.add');
                 is(call, 'config.loginStatus', 'logged in');
                 is(call, 'config.parameter.2', 'sessionparameter 2');
                 is(call, 'config.parameter.3', 'sessionparameter 3');
                 break;
-            case 5:
+            case 6:
                 is(call, 'method', 'wtSmart.customer.data.add');
                 is(call, 'config.id', 'abc@def.de');
                 is(call, 'config.validation', true);
@@ -4546,7 +4572,7 @@ scenarios:
                 is(call, 'config.street', 'street value');
                 is(call, 'config.streetNumber', 'streetNumber value');
                 break;
-            case 6:
+            case 7:
                 is(call, 'method', 'wtSmart.track');
                 is(call, 'config', false);
                 break;
@@ -4590,33 +4616,58 @@ scenarios:
     }
 
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(6);
+    assertThat(calls.length).isEqualTo(13);
+
+    calls.forEach((call, index) => {
+        switch (index) {
+            case 1:
+                is(call, 'method', 'wtSmart.track');
+                is(call, 'config', false);
+                break;
+            case 3:
+                is(call, 'method', 'wtSmart.track');
+                is(call, 'config', true);
+                break;
+            case 5:
+                is(call, 'method', 'wtSmart.trackPage');
+                is(call, 'config', false);
+                break;
+            case 7:
+                is(call, 'method', 'wtSmart.trackPage');
+                is(call, 'config', true);
+                break;
+            case 9:
+                is(call, 'method', 'wtSmart.trackAction');
+                is(call, 'config', false);
+                break;
+            case 11:
+                is(call, 'method', 'wtSmart.trackAction');
+                is(call, 'config', true);
+                break;
+            default:
+                break;
+        }
+    });
+- name: only pixel version call
+  code: |
+    const mockData = {
+        requestType: 'event',
+        track: false
+    };
+
+    runCode(mockData);
+    if (debugTest) {
+        debugLog(calls);
+    }
+    assertApi('gtmOnSuccess').wasCalled();
+    assertThat(calls.length).isEqualTo(1);
+
 
     calls.forEach((call, index) => {
         switch (index) {
             case 0:
-                is(call, 'method', 'wtSmart.track');
-                is(call, 'config', false);
-                break;
-            case 1:
-                is(call, 'method', 'wtSmart.track');
-                is(call, 'config', true);
-                break;
-            case 2:
-                is(call, 'method', 'wtSmart.trackPage');
-                is(call, 'config', false);
-                break;
-            case 3:
-                is(call, 'method', 'wtSmart.trackPage');
-                is(call, 'config', true);
-                break;
-            case 4:
-                is(call, 'method', 'wtSmart.trackAction');
-                is(call, 'config', false);
-                break;
-            case 5:
-                is(call, 'method', 'wtSmart.trackAction');
-                is(call, 'config', true);
+                is(call, 'method', 'wtSmart._ps');
+                is(call, 'config', 32);
                 break;
             default:
                 break;
