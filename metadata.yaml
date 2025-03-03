@@ -15,6 +15,8 @@
 homepage: "https://mapp.com"
 documentation: "https://docs.mapp.com/display/WIGT"
 versions:
+  - sha: 7eccb8a49c2ee51cc63d4c73658ccccc82ea0229
+    changeNotes: add advanced config options and advanced event tracking
   - sha: c1387a6529e0b58874909a2563023386ed288f69
     changeNotes: add Engage user registration
   - sha: f10f0ea1600d39f02225c3d7001f0e3034211492
