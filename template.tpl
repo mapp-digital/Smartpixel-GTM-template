@@ -330,22 +330,6 @@ ___TEMPLATE_PARAMETERS___
     ]
   },
   {
-    "type": "TEXT",
-    "name": "acquire",
-    "displayName": "Mapp Acquire",
-    "simpleValueType": true,
-    "lineCount": 2,
-    "help": "Paste your Mapp Acquire script tag here.",
-    "valueValidators": [
-      {
-        "type": "REGEX",
-        "args": [
-          "(^$|.*id\u003d\\d+\u0026m\u003d\\d+.*)"
-        ]
-      }
-    ]
-  },
-  {
     "type": "GROUP",
     "name": "actionGroup",
     "displayName": "Event",
@@ -1754,6 +1738,8 @@ const callInWindow = require('callInWindow');
 const makeTableMap = require('makeTableMap');
 const injectScript = require('injectScript');
 
+const VERSION = '1.4.0';
+
 // Functions
 
 // If the user chose to log debug output, initialize the logging method
@@ -1803,7 +1789,7 @@ const dataHandler_ = (root, propertyNames, inconsistencyFixer) => {
 };
 
 const runMapp = () => {
-    callInWindow('wtSmart._ps', 32, '1.3.0');
+    callInWindow('wtSmart._ps', 32, VERSION);
     if (data.requestType === 'page') {
         // Init
         /**
@@ -1900,6 +1886,8 @@ const runMapp = () => {
     }
     else if (data.requestType === 'event') {
         // action
+        const isReload = data.extensionActionReload || data.extensionFormUpdate;
+        if(!isReload) {data.actionName = data.actionName || 'noEventNameGiven';}
         dataHandler_('action', ['name', 'parameter', 'goal']);
         // Extension event stuff
         // links reload
@@ -1992,10 +1980,13 @@ const runMapp = () => {
 const onSuccess = () => {
     log('Smartpixel loaded from CDN!');
     runMapp();
+    data.gtmOnSuccess();
 };
 
 const onFailure = () => {
     log('Could not load Smartpixel from CDN!');
+    data.gtmOnFailure();
+  
 };
 
 if(data.loadSmartPixelFromCDN) {
@@ -2009,16 +2000,8 @@ if(data.loadSmartPixelFromCDN) {
 } else {
     log('Smartpixel not loaded from CDN - make sure to load it yourself!');
     runMapp();
+    data.gtmOnSuccess();
 }
-
-if(data.acquire) {
-  const aqUrlStart = data.acquire.indexOf('https://c.flx1.com/'), aqDash = data.acquire.indexOf('-'), aqUrlEnd = data.acquire.indexOf('.js');
-  const aqId = data.acquire.substring(aqDash + 1, aqUrlEnd), aqM = data.acquire.substring(aqUrlStart + 19, aqDash);
-  const aqUrl = 'https://c.flx1.com/' + aqM + '-' + aqId + '.js?id=' + aqId + '&m=' + aqM;
-  log('Load Mapp Acquire from: ', aqUrl);
-  injectScript(aqUrl, ()=>{log('Mapp Acquire loaded');}, ()=>{log('Mapp Acquire could not be loaded');});
-}
-data.gtmOnSuccess();
 
 
 ___WEB_PERMISSIONS___
@@ -4651,7 +4634,7 @@ scenarios:
 - name: only pixel version call
   code: |
     const mockData = {
-        requestType: 'event',
+        requestType: 'page',
         track: false
     };
 
@@ -4660,7 +4643,7 @@ scenarios:
         debugLog(calls);
     }
     assertApi('gtmOnSuccess').wasCalled();
-    assertThat(calls.length).isEqualTo(1);
+    assertThat(calls.length).isEqualTo(2);
 
 
     calls.forEach((call, index) => {
@@ -4668,6 +4651,36 @@ scenarios:
             case 0:
                 is(call, 'method', 'wtSmart._ps');
                 is(call, 'config', 32);
+                break;
+            default:
+                break;
+        }
+    });
+- name: default event name for type event
+  code: |-
+    const mockData = {
+        requestType: 'event',
+        keepData: false,
+        track: 'track'
+    };
+
+    runCode(mockData);
+    if (debugTest) {
+        debugLog(calls);
+    }
+    assertApi('gtmOnSuccess').wasCalled();
+    assertThat(calls.length).isEqualTo(3);
+
+
+    calls.forEach((call, index) => {
+        switch (index) {
+            case 1:
+                is(call, 'method', 'wtSmart.action.data.add');
+                is(call, 'config.name', 'noEventNameGiven');
+                break;
+            case 3:
+                is(call, 'method', 'wtSmart.track');
+                is(call, 'config', false);
                 break;
             default:
                 break;
