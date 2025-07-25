@@ -169,6 +169,10 @@ ___TEMPLATE_PARAMETERS___
             "displayValue": "registerObfuscation"
           },
           {
+            "value": "parameterObfuscation",
+            "displayValue": "parameterObfuscation"
+          },
+          {
             "value": "requestObfuscation",
             "displayValue": "requestObfuscation"
           },
@@ -262,7 +266,7 @@ ___TEMPLATE_PARAMETERS___
       }
     ],
     "newRowButtonText": "Add Advanced Config Setting",
-    "help": "Find more information about each setting here: \u003ca href\u003d\"https://documentation.mapp.com/1.0/en/advanced-15741253.html\" target\u003d\"_blank\"\u003eSmartpixel Advanced Settings\u003c/a\u003e\u003c/br\u003e\u003c/br\u003e\nsecureCookie: true, false\u003c/br\u003e\nproductMerge: true, false\u003c/br\u003e\nregisterObfuscation: true, false\u003c/br\u003e\nrequestObfuscation: true, false\u003c/br\u003e\ntabBrowsing: true, false\u003c/br\u003e\npreRendering: true, false\u003c/br\u003e\nforceOldEverId: true, false\u003c/br\u003e\nrequestQueue.activated: true, false\u003c/br\u003e\nrequestQueue.ttl: number (seconds)\u003c/br\u003e\nrequestQueue.resendInterval: number (milliseconds)\u003c/br\u003e\nrequestQueue.size: number\u003c/br\u003e\nrequestQueue.retries: number\u003c/br\u003e\nrequestQueue.retriesOption: 1,2\u003c/br\u003e\nsendViaSDK: true, false\u003c/br\u003e\nsendViaServer.activated: true, false\u003c/br\u003e\nsendViaServer.serverDomain: string\u003c/br\u003e\nsendViaServer.serverPath: string\u003c/br\u003e\nsendViaServer.droppedRequests: 0,1,2,3\u003c/br\u003e\nsendViaServer.blacklist: string1,string2,string3\u003c/br\u003e\nuseHashForDefaultPageName: true, false\u003c/br\u003e\nuseParamsForDefaultPageName: string1,string2,string3\u003c/br\u003e\nrequestLimit.activated: true, false\u003c/br\u003e\nrequestLimit.amount: number\u003c/br\u003e\nrequestLimit.duration: number (seconds)",
+    "help": "Find more information about each setting here: \u003ca href\u003d\"https://documentation.mapp.com/1.0/en/advanced-15741253.html\" target\u003d\"_blank\"\u003eSmartpixel Advanced Settings\u003c/a\u003e\u003c/br\u003e\u003c/br\u003e\nsecureCookie: true, false\u003c/br\u003e\nproductMerge: true, false\u003c/br\u003e\nregisterObfuscation: true, false\u003c/br\u003e\nparameterObfuscation: string1,string2,stringN\u003c/br\u003e\nrequestObfuscation: true, false\u003c/br\u003e\ntabBrowsing: true, false\u003c/br\u003e\npreRendering: true, false\u003c/br\u003e\nforceOldEverId: true, false\u003c/br\u003e\nrequestQueue.activated: true, false\u003c/br\u003e\nrequestQueue.ttl: number (seconds)\u003c/br\u003e\nrequestQueue.resendInterval: number (milliseconds)\u003c/br\u003e\nrequestQueue.size: number\u003c/br\u003e\nrequestQueue.retries: number\u003c/br\u003e\nrequestQueue.retriesOption: 1,2\u003c/br\u003e\nsendViaSDK: true, false\u003c/br\u003e\nsendViaServer.activated: true, false\u003c/br\u003e\nsendViaServer.serverDomain: string\u003c/br\u003e\nsendViaServer.serverPath: string\u003c/br\u003e\nsendViaServer.droppedRequests: 0,1,2,3\u003c/br\u003e\nsendViaServer.blacklist: string1,string2,string3\u003c/br\u003e\nuseHashForDefaultPageName: true, false\u003c/br\u003e\nuseParamsForDefaultPageName: string1,string2,string3\u003c/br\u003e\nrequestLimit.activated: true, false\u003c/br\u003e\nrequestLimit.amount: number\u003c/br\u003e\nrequestLimit.duration: number (seconds)",
     "enablingConditions": [
       {
         "paramName": "requestType",
@@ -309,6 +313,14 @@ ___TEMPLATE_PARAMETERS___
           {
             "value": "userIdentification_saveTemporarySessionId",
             "displayValue": "UserIdentification: saveTemporarySessionId"
+          },
+          {
+            "value": "advancedPermission_activated",
+            "displayValue": "AdvancedPermission: activated"
+          },
+          {
+            "value": "advancedPermission_permissionCategory",
+            "displayValue": "AdvancedPermission: permissionCategory"
           }
         ]
       },
@@ -320,7 +332,7 @@ ___TEMPLATE_PARAMETERS___
       }
     ],
     "newRowButtonText": "Add GDPR Config Setting",
-    "help": "Find more information about each setting here: \u003ca href\u003d\"https://documentation.mapp.com/1.0/en/advanced-15741253.html\" target\u003d\"_blank\"\u003eSmartpixel Advanced Settings\u003c/a\u003e\u003c/br\u003e\u003c/br\u003e\n\noptOutName: string\u003c/br\u003e\nuserIdentification.enableAnonymousFunction: true, false\u003c/br\u003e\nuserIdentification.anonymousCookieName: string\u003c/br\u003e\nuserIdentification.anonymousOptIn: true, false\u003c/br\u003e\nuserIdentification.suppressParameter: string1,string2,string3\u003c/br\u003e\nuserIdentification.temporarySessionId: string\u003c/br\u003e\nuserIdentification.saveTemporarySessionId: true, false",
+    "help": "Find more information about each setting here: \u003ca href\u003d\"https://documentation.mapp.com/1.0/en/advanced-15741253.html\" target\u003d\"_blank\"\u003eSmartpixel Advanced Settings\u003c/a\u003e\u003c/br\u003e\u003c/br\u003e\n\noptOutName: string\u003c/br\u003e\nuserIdentification.enableAnonymousFunction: true, false\u003c/br\u003e\nuserIdentification.anonymousCookieName: string\u003c/br\u003e\nuserIdentification.anonymousOptIn: true, false\u003c/br\u003e\nuserIdentification.suppressParameter: string1,string2,string3\u003c/br\u003e\nuserIdentification.temporarySessionId: string\u003c/br\u003e\nuserIdentification.saveTemporarySessionId: true, false\u003c/br\u003e\nadvancedPermission.activated: true, false\u003c/br\u003e\nadvancedPermission.permissionCategory: number",
     "enablingConditions": [
       {
         "paramName": "requestType",
@@ -1738,7 +1750,7 @@ const callInWindow = require('callInWindow');
 const makeTableMap = require('makeTableMap');
 const injectScript = require('injectScript');
 
-const VERSION = '1.4.0';
+const VERSION = '1.5.0';
 
 // Functions
 
@@ -1843,7 +1855,7 @@ const runMapp = () => {
         dataHandler_('advanced', advancedKeys, advancedHandler_);
         // new Advanced
         (()=>{
-             const c = {sendViaServer:{}, requestQueue: {}, requestLimit: {}, userIdentification: {}}; // new Advanced Config
+             const c = {sendViaServer:{}, requestQueue: {}, requestLimit: {}, userIdentification: {}, advancedPermission: {}}; // new Advanced Config
              const method = 'wtSmart.advanced.add';
              let configArray = [];
              if(data.advanced2) {
@@ -1861,9 +1873,12 @@ const runMapp = () => {
                  }
              });
              // comma separated strings to array
-             c.useParamsForDefaultPageName = c.useParamsForDefaultPageName ? c.useParamsForDefaultPageName.split(',') : [];
-             c.userIdentification.suppressParameter = c.userIdentification.suppressParameter ? c.userIdentification.suppressParameter.split(',') : [];
-             c.sendViaServer.blacklist = c.sendViaServer.blacklist ? c.sendViaServer.blacklist.split(',') : [];
+             ['useParamsForDefaultPageName', 'parameterObfuscation'].forEach(k => {
+               c[k] = c[k] ? c[k].split(',') : [];
+             });
+             [['userIdentification', 'suppressParameter'], ['sendViaServer', 'blacklist']].forEach((d) => { 
+               c[d[0]][d[1]] = c[d[0]][d[1]] ? c[d[0]][d[1]].split(',') : [];
+             });
              // advanced pixel call
              log('Calling ' + method + ': ', c);
              callInWindow(method, c);
@@ -3409,7 +3424,7 @@ scenarios:
                 break;
         }
     });
-- name: advanced only
+- name: old advanced only
   code: |
     const mockData = {
         requestType: 'page',
@@ -3463,6 +3478,68 @@ scenarios:
             case 3:
                 is(call, 'method', 'wtSmart.track');
                 is(call, 'config', false);
+                break;
+            default:
+                break;
+        }
+    });
+- name: advanced permission
+  code: |
+    const mockData = {
+       requestType: 'page',
+       track: 'track',
+        gdpr: [
+          {parameter: 'advancedPermission_activated', value: true},
+          {parameter: 'advancedPermission_permissionCategory', value: 2},
+        ]
+    };
+
+    runCode(mockData);
+    if (debugTest) {
+        debugLog(calls);
+    }
+    assertApi('gtmOnSuccess').wasCalled();
+    assertThat(calls.length).isEqualTo(3);
+
+    calls.forEach((call, index) => {
+        switch (index) {
+            case 1:
+                is(call, 'method', 'wtSmart.advanced.add');
+                is(call, 'config.advancedPermission', {"activated":true,"permissionCategory":2});
+                break;
+            default:
+                break;
+        }
+    });
+- name: advanced string to array
+  code: |
+    const mockData = {
+       requestType: 'page',
+       track: 'track',
+        advanced2: [
+          {parameter: 'useParamsForDefaultPageName', value: 'a,b,c'},
+          {parameter: 'parameterObfuscation', value: 'd,e,f'},
+          {parameter: 'sendViaServer_blacklist', value: 'h,i,j'},
+        ],
+         gdpr: [
+          {parameter: 'userIdentification_suppressParameter', value: 'k,l,m'},
+        ]
+    };
+    runCode(mockData);
+    if (debugTest) {
+        debugLog(calls);
+    }
+    assertApi('gtmOnSuccess').wasCalled();
+    assertThat(calls.length).isEqualTo(3);
+
+    calls.forEach((call, index) => {
+        switch (index) {
+            case 1:
+                is(call, 'method', 'wtSmart.advanced.add');
+                is(call, 'config.useParamsForDefaultPageName', ['a', 'b', 'c']);
+                is(call, 'config.parameterObfuscation', ['d', 'e', 'f']);
+                is(call, 'config.sendViaServer.blacklist', ['h', 'i', 'j']);
+                is(call, 'config.userIdentification.suppressParameter', ['k', 'l', 'm']);
                 break;
             default:
                 break;
