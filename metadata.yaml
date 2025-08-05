@@ -15,6 +15,8 @@
 homepage: "https://mapp.com"
 documentation: "https://docs.mapp.com/docs/google-tag-manager-gtm"
 versions:
+  - sha: f2952d4dd39653869970cfdabed2ba3fe9c55b00
+    changeNotes: update documentation links
   - sha: 2703f101073a200fbac16269941fb8277b4683a2
     changeNotes: add advancedPermission and parameter obfuscation
   - sha: 2d023ae68998660a6ddb072dc3fac6f08d77adac
