@@ -139,10 +139,10 @@ ___TEMPLATE_PARAMETERS___
   {
     "type": "CHECKBOX",
     "name": "loadSmartPixelFromCDN",
-    "checkboxText": "Load SmartPixel from Mapp CDN",
+    "checkboxText": "Load Smart Pixel from Mapp CDN",
     "simpleValueType": true,
     "defaultValue": false,
-    "help": "Check if you want to load SmartPixel via Mapp CDN. Leave unchecked to include the SmartPixel via the custom HTML tag.\u003cbr\u003e\u003cstrong\u003ePlease note:\u003c/strong\u003e Only load the SmartPixel once. If you configure multiple tags leave the box unchecked for any future Mapp Intelligence tags.",
+    "help": "Check if you want to load Smart Pixel via Mapp CDN. Leave unchecked to include the SmartPixel via the custom HTML tag.\u003cbr\u003e\u003cstrong\u003ePlease note:\u003c/strong\u003e Only load the SmartPixel once. If you configure multiple tags leave the box unchecked for any future Mapp Intelligence tags.",
     "alwaysInSummary": true
   },
   {
@@ -266,7 +266,7 @@ ___TEMPLATE_PARAMETERS___
       }
     ],
     "newRowButtonText": "Add Advanced Config Setting",
-    "help": "Find more information about each setting here: \u003ca href\u003d\"https://documentation.mapp.com/1.0/en/advanced-15741253.html\" target\u003d\"_blank\"\u003eSmartpixel Advanced Settings\u003c/a\u003e\u003c/br\u003e\u003c/br\u003e\nsecureCookie: true, false\u003c/br\u003e\nproductMerge: true, false\u003c/br\u003e\nregisterObfuscation: true, false\u003c/br\u003e\nparameterObfuscation: string1,string2,stringN\u003c/br\u003e\nrequestObfuscation: true, false\u003c/br\u003e\ntabBrowsing: true, false\u003c/br\u003e\npreRendering: true, false\u003c/br\u003e\nforceOldEverId: true, false\u003c/br\u003e\nrequestQueue.activated: true, false\u003c/br\u003e\nrequestQueue.ttl: number (seconds)\u003c/br\u003e\nrequestQueue.resendInterval: number (milliseconds)\u003c/br\u003e\nrequestQueue.size: number\u003c/br\u003e\nrequestQueue.retries: number\u003c/br\u003e\nrequestQueue.retriesOption: 1,2\u003c/br\u003e\nsendViaSDK: true, false\u003c/br\u003e\nsendViaServer.activated: true, false\u003c/br\u003e\nsendViaServer.serverDomain: string\u003c/br\u003e\nsendViaServer.serverPath: string\u003c/br\u003e\nsendViaServer.droppedRequests: 0,1,2,3\u003c/br\u003e\nsendViaServer.blacklist: string1,string2,string3\u003c/br\u003e\nuseHashForDefaultPageName: true, false\u003c/br\u003e\nuseParamsForDefaultPageName: string1,string2,string3\u003c/br\u003e\nrequestLimit.activated: true, false\u003c/br\u003e\nrequestLimit.amount: number\u003c/br\u003e\nrequestLimit.duration: number (seconds)",
+    "help": "Find more information about each setting here: \u003ca href\u003d\"https://docs.mapp.com/docs/tracking-configuration-advanced\" target\u003d\"_blank\"\u003eSmartpixel Advanced Settings\u003c/a\u003e\u003c/br\u003e\u003c/br\u003e\nsecureCookie: true, false\u003c/br\u003e\nproductMerge: true, false\u003c/br\u003e\nregisterObfuscation: true, false\u003c/br\u003e\nparameterObfuscation: string1,string2,stringN\u003c/br\u003e\nrequestObfuscation: true, false\u003c/br\u003e\ntabBrowsing: true, false\u003c/br\u003e\npreRendering: true, false\u003c/br\u003e\nforceOldEverId: true, false\u003c/br\u003e\nrequestQueue.activated: true, false\u003c/br\u003e\nrequestQueue.ttl: number (seconds)\u003c/br\u003e\nrequestQueue.resendInterval: number (milliseconds)\u003c/br\u003e\nrequestQueue.size: number\u003c/br\u003e\nrequestQueue.retries: number\u003c/br\u003e\nrequestQueue.retriesOption: 1,2\u003c/br\u003e\nsendViaSDK: true, false\u003c/br\u003e\nsendViaServer.activated: true, false\u003c/br\u003e\nsendViaServer.serverDomain: string\u003c/br\u003e\nsendViaServer.serverPath: string\u003c/br\u003e\nsendViaServer.droppedRequests: 0,1,2,3\u003c/br\u003e\nsendViaServer.blacklist: string1,string2,string3\u003c/br\u003e\nuseHashForDefaultPageName: true, false\u003c/br\u003e\nuseParamsForDefaultPageName: string1,string2,string3\u003c/br\u003e\nrequestLimit.activated: true, false\u003c/br\u003e\nrequestLimit.amount: number\u003c/br\u003e\nrequestLimit.duration: number (seconds)",
     "enablingConditions": [
       {
         "paramName": "requestType",
@@ -332,7 +332,7 @@ ___TEMPLATE_PARAMETERS___
       }
     ],
     "newRowButtonText": "Add GDPR Config Setting",
-    "help": "Find more information about each setting here: \u003ca href\u003d\"https://documentation.mapp.com/1.0/en/advanced-15741253.html\" target\u003d\"_blank\"\u003eSmartpixel Advanced Settings\u003c/a\u003e\u003c/br\u003e\u003c/br\u003e\n\noptOutName: string\u003c/br\u003e\nuserIdentification.enableAnonymousFunction: true, false\u003c/br\u003e\nuserIdentification.anonymousCookieName: string\u003c/br\u003e\nuserIdentification.anonymousOptIn: true, false\u003c/br\u003e\nuserIdentification.suppressParameter: string1,string2,string3\u003c/br\u003e\nuserIdentification.temporarySessionId: string\u003c/br\u003e\nuserIdentification.saveTemporarySessionId: true, false\u003c/br\u003e\nadvancedPermission.activated: true, false\u003c/br\u003e\nadvancedPermission.permissionCategory: number",
+    "help": "Find more information about each setting here: \u003ca href\u003d\"https://docs.mapp.com/docs/tracking-configuration-advanced\" target\u003d\"_blank\"\u003eSmartpixel Advanced Settings\u003c/a\u003e\u003c/br\u003e\u003c/br\u003e\n\noptOutName: string\u003c/br\u003e\nuserIdentification.enableAnonymousFunction: true, false\u003c/br\u003e\nuserIdentification.anonymousCookieName: string\u003c/br\u003e\nuserIdentification.anonymousOptIn: true, false\u003c/br\u003e\nuserIdentification.suppressParameter: string1,string2,string3\u003c/br\u003e\nuserIdentification.temporarySessionId: string\u003c/br\u003e\nuserIdentification.saveTemporarySessionId: true, false\u003c/br\u003e\nadvancedPermission.activated: true, false\u003c/br\u003e\nadvancedPermission.permissionCategory: number",
     "enablingConditions": [
       {
         "paramName": "requestType",
@@ -1750,7 +1750,7 @@ const callInWindow = require('callInWindow');
 const makeTableMap = require('makeTableMap');
 const injectScript = require('injectScript');
 
-const VERSION = '1.5.0';
+const VERSION = '1.5.1';
 
 // Functions
 

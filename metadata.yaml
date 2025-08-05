@@ -13,7 +13,7 @@
 # limitations under the License.
 
 homepage: "https://mapp.com"
-documentation: "https://docs.mapp.com/display/WIGT"
+documentation: "https://docs.mapp.com/docs/google-tag-manager-gtm"
 versions:
   - sha: 2703f101073a200fbac16269941fb8277b4683a2
     changeNotes: add advancedPermission and parameter obfuscation
