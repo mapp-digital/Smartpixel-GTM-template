@@ -15,6 +15,8 @@
 homepage: "https://mapp.com"
 documentation: "https://docs.mapp.com/docs/google-tag-manager-gtm"
 versions:
+  - sha: 0b5c428802d20c9d357115fa47fcfae98b7c6130
+    changeNotes: add clickRepo and displayRepo product status
   - sha: f2952d4dd39653869970cfdabed2ba3fe9c55b00
     changeNotes: update documentation links
   - sha: 2703f101073a200fbac16269941fb8277b4683a2
@@ -46,9 +48,9 @@ versions:
   - sha: 1fe22cebe9ba0c51140b3d8f1b4805050f75b252
     changeNotes: Product tracking via event
   - sha: 666323a20387670ca70e2e454c8ea3e0c9e6af44
-    changeNotes: Add option to deactivate rla cookie 
+    changeNotes: Add option to deactivate rla cookie
   - sha: e48746bbc8fa0b907c776f04523c7c5f9cb81cf9
-    changeNotes: Input validation for Mapp Acquire 
+    changeNotes: Input validation for Mapp Acquire
   - sha: f9f57320936144e83ce5db09ebeefadd10b4e194
     changenotes: Mapp Cloud rebrand & add Mapp Acquire
   - sha: 56a0deaa0f4b3a397228a8cb23a78c90faa61ebc
@@ -65,4 +67,3 @@ versions:
     changeNotes: Webtrekk to Mapp Intelligence rebrand
   - sha: 4b0a040f6983a040a02c1f1491541c7e908532cb
     changeNotes: Initial Version
-    
