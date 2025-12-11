@@ -901,6 +901,10 @@ ___TEMPLATE_PARAMETERS___
                   {
                     "value": "orderStatus",
                     "displayValue": "orderStatus"
+                  },
+                  {
+                    "value": "tax",
+                    "displayValue": "tax"
                   }
                 ]
               },
@@ -912,7 +916,7 @@ ___TEMPLATE_PARAMETERS___
                 "valueHint": "String"
               }
             ],
-            "help": "\u003cstrong\u003ePayment method: \u003c/strong\u003eUse this to transmit the payment method of the order. (String)\u003cbr /\u003e\n\u003cstrong\u003eShipping service: \u003c/strong\u003eUse this to transmit the shipping service of the order. (String) \u003cbr /\u003e\n\u003cstrong\u003eShipping speed:\u003c/strong\u003e Use this to transmit the shipping speed of the order. (String)\u003cbr /\u003e \n\u003cstrong\u003eShipping costs:\u003c/strong\u003e Use this to transmit the shipping costs of the order. (Number) \u003cbr /\u003e\n\u003cstrong\u003eGross margin:\u003c/strong\u003e Use this to transmit the margin/mark-up of the order. (Number)\u003cbr /\u003e\n\u003cstrong\u003eOrder status: \u003c/strong\u003eUse this to transmit the order status of the order. (String)",
+            "help": "\u003cstrong\u003ePayment method: \u003c/strong\u003eUse this to transmit the payment method of the order. (String)\u003cbr /\u003e\n\u003cstrong\u003eShipping service: \u003c/strong\u003eUse this to transmit the shipping service of the order. (String) \u003cbr /\u003e\n\u003cstrong\u003eShipping speed:\u003c/strong\u003e Use this to transmit the shipping speed of the order. (String)\u003cbr /\u003e \n\u003cstrong\u003eShipping costs:\u003c/strong\u003e Use this to transmit the shipping costs of the order. (Number) \u003cbr /\u003e\n\u003cstrong\u003eGross margin:\u003c/strong\u003e Use this to transmit the margin/mark-up of the order. (Number)\u003cbr /\u003e\n\u003cstrong\u003eOrder status: \u003c/strong\u003eUse this to transmit the order status of the order. (String) \u003cbr /\u003e\n\u003cstrong\u003eTax value:\u003c/strong\u003e Use this to transmit the tax amount of the order. (Number)",
             "newRowButtonText": "Add predefined e-commerce parameter"
           },
           {
@@ -3848,7 +3852,8 @@ scenarios:
             {id: 'shippingSpeed', value: 'shippingSpeed value'},
             {id: 'shippingCosts', value: 'shippingCosts value'},
             {id: 'grossMargin', value: 'grossMargin value'},
-            {id: 'orderStatus', value: 'orderStatus value'}
+            {id: 'orderStatus', value: 'orderStatus value'},
+            {id: 'tax', value: 'tax value'}
         ],
         orderValue: '9.99'
     };
@@ -3875,6 +3880,7 @@ scenarios:
                 is(call, 'config.shippingCosts', 'shippingCosts value');
                 is(call, 'config.grossMargin', 'grossMargin value');
                 is(call, 'config.orderStatus', 'orderStatus value');
+                is(call, 'config.tax', 'tax value');
                 break;
             case 3:
                 is(call, 'method', 'wtSmart.product.view.data.add');
@@ -4276,7 +4282,8 @@ scenarios:
             {id: 'shippingSpeed', value: 'shippingSpeed value'},
             {id: 'shippingCosts', value: 'shippingCosts value'},
             {id: 'grossMargin', value: 'grossMargin value'},
-            {id: 'orderStatus', value: 'orderStatus value'}
+            {id: 'orderStatus', value: 'orderStatus value'},
+            {id: 'tax', value: 'tax value'}
         ],
         orderValue: '9.99',
         sessionLoginStatus: 'logged in',
@@ -4391,6 +4398,7 @@ scenarios:
                 is(call, 'config.shippingCosts', 'shippingCosts value');
                 is(call, 'config.grossMargin', 'grossMargin value');
                 is(call, 'config.orderStatus', 'orderStatus value');
+                is(call, 'config.tax', 'tax value');
                 break;
             case 6:
                 is(call, 'method', 'wtSmart.product.view.data.add');

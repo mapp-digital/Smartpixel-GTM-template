@@ -1,3 +1,12 @@
+<a name="1.6.1"></a>
+
+# 1.6.1 (2025-12-16)
+
+## Features
+
+- add *fashionStyleId*, *fashionItemTitle* and *fashionItemCategory* to **Mapp Intelligence Product Array**
+- add *tax* to **Mapp Cloud Tracking**
+
 <a name="1.6.0"></a>
 
 # 1.6.0 (2025-11-19)
