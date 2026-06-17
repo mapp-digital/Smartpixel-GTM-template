@@ -1,3 +1,11 @@
+<a name="1.6.2"></a>
+
+# 1.6.2 (2026-06-17)
+
+## Features
+
+- add *fashionProductId* to **Mapp Intelligence Product Array**
+
 <a name="1.6.1"></a>
 
 # 1.6.1 (2025-12-16)
