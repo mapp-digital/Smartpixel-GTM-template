@@ -1,3 +1,11 @@
+<a name="1.6.3"></a>
+
+# 1.6.3 (2026-10-28)
+
+## Features
+
+- add *registrationIsoCode*, *registrationIsoLanguage* and *registrationTimezone* to **Mapp Cloud Tracking**
+
 <a name="1.6.2"></a>
 
 # 1.6.2 (2026-06-17)

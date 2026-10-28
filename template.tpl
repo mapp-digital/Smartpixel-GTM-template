@@ -1213,6 +1213,18 @@ ___TEMPLATE_PARAMETERS___
                 "displayValue": "registrationTitle"
               },
               {
+                "value": "registrationIsoCode",
+                "displayValue": "registrationIsoCode"
+              },
+              {
+                "value": "registrationIsoLanguage",
+                "displayValue": "registrationIsoLanguage"
+              },
+              {
+                "value": "registrationTimezone",
+                "displayValue": "registrationTimezone"
+              },
+              {
                 "value": "registrationOptin",
                 "displayValue": "registrationOptin"
               },
@@ -1275,7 +1287,7 @@ ___TEMPLATE_PARAMETERS___
             "valueHint": "String"
           }
         ],
-        "help": "\u003cstrong\u003eregistrationEmail:\u003c/strong\u003e The Email address used to identify the user in Mapp Engage. (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationGroupId:\u003c/strong\u003e Provide the group ID in case of a new registration for the user in Mapp Engage. (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationMode:\u003c/strong\u003e Provide the registration method used to register for marketing activities (e.g. double-optin). (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationFirstName:\u003c/strong\u003e First name of the user to be used in Mapp Engage. (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationLastName:\u003c/strong\u003e Last name of the user to be used in Mapp Engage. (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationGender:\u003c/strong\u003e Gender of the user (f\u003dfemale, m\u003dmale, u\u003dundisclosed). (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationTitle:\u003c/strong\u003e The title of the user to be used in Mapp Engage. (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationOptin:\u003c/strong\u003e Provide information that the user consented to use their data (true/false). (String / Boolean)\u003cbr\u003e \n\u003cstrong\u003eemail:\u003c/strong\u003e Use this to transmit the e-mail address of a user. Will not be hashed by the pixel. (String)\u003cbr\u003e \u003cstrong\u003eemailRID:\u003c/strong\u003e Use this to transmit the e-mail receiver ID of the user. (String)\u003cbr\u003e \u003cstrong\u003eemailOptin:\u003c/strong\u003e Use this to transmit the e-mail optin status of the user. (Boolean)\u003cbr\u003e \u003cstrong\u003efirstName:\u003c/strong\u003e Use this to transmit the first name of the user. (String)\u003cbr\u003e \u003cstrong\u003elastName:\u003c/strong\u003e Use this to transmit the last name of the user. (String)\u003cbr\u003e \u003cstrong\u003etelephone:\u003c/strong\u003e Use this to transmit the telephone number of the user. (String)\u003cbr\u003e \u003cstrong\u003egender:\u003c/strong\u003e Use this to transmit the gender of the user (1 \u003d male | 2 \u003d female). (Number)\u003cbr\u003e \u003cstrong\u003ebirthday:\u003c/strong\u003e Use this to transmit the user\u0027s date of birth (YYYYMMDD). (String)\u003cbr\u003e \u003cstrong\u003ecountry:\u003c/strong\u003e Use this to transmit the country of the user. (String)\u003cbr\u003e \u003cstrong\u003ecity:\u003c/strong\u003e Use this to transmit the city of the user. (String)\u003cbr\u003e \u003cstrong\u003estreet:\u003c/strong\u003e Use this to transmit the street of the user. (String)\u003cbr\u003e \u003cstrong\u003estreetNumber:\u003c/strong\u003e Use this to transmit the street number of the user. (String)",
+        "help": "\u003cstrong\u003eregistrationEmail:\u003c/strong\u003e The Email address used to identify the user in Mapp Engage. (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationGroupId:\u003c/strong\u003e Provide the group ID in case of a new registration for the user in Mapp Engage. (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationMode:\u003c/strong\u003e Provide the registration method used to register for marketing activities (e.g. double-optin). (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationFirstName:\u003c/strong\u003e First name of the user to be used in Mapp Engage. (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationLastName:\u003c/strong\u003e Last name of the user to be used in Mapp Engage. (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationGender:\u003c/strong\u003e Gender of the user (f\u003dfemale, m\u003dmale, u\u003dundisclosed). (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationTitle:\u003c/strong\u003e The title of the user to be used in Mapp Engage. (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationIsoCode:\u003c/strong\u003e The ISO code of the user to be used in Mapp Engage. (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationIsoLanguage:\u003c/strong\u003e The ISO language of the user to be used in Mapp Engage. (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationTimezone:\u003c/strong\u003e The timezone of the user to be used in Mapp Engage. (String)\u003cbr\u003e \n\u003cstrong\u003eregistrationOptin:\u003c/strong\u003e Provide information that the user consented to use their data (true/false). (String / Boolean)\u003cbr\u003e \n\u003cstrong\u003eemail:\u003c/strong\u003e Use this to transmit the e-mail address of a user. Will not be hashed by the pixel. (String)\u003cbr\u003e \u003cstrong\u003eemailRID:\u003c/strong\u003e Use this to transmit the e-mail receiver ID of the user. (String)\u003cbr\u003e \u003cstrong\u003eemailOptin:\u003c/strong\u003e Use this to transmit the e-mail optin status of the user. (Boolean)\u003cbr\u003e \u003cstrong\u003efirstName:\u003c/strong\u003e Use this to transmit the first name of the user. (String)\u003cbr\u003e \u003cstrong\u003elastName:\u003c/strong\u003e Use this to transmit the last name of the user. (String)\u003cbr\u003e \u003cstrong\u003etelephone:\u003c/strong\u003e Use this to transmit the telephone number of the user. (String)\u003cbr\u003e \u003cstrong\u003egender:\u003c/strong\u003e Use this to transmit the gender of the user (1 \u003d male | 2 \u003d female). (Number)\u003cbr\u003e \u003cstrong\u003ebirthday:\u003c/strong\u003e Use this to transmit the user\u0027s date of birth (YYYYMMDD). (String)\u003cbr\u003e \u003cstrong\u003ecountry:\u003c/strong\u003e Use this to transmit the country of the user. (String)\u003cbr\u003e \u003cstrong\u003ecity:\u003c/strong\u003e Use this to transmit the city of the user. (String)\u003cbr\u003e \u003cstrong\u003estreet:\u003c/strong\u003e Use this to transmit the street of the user. (String)\u003cbr\u003e \u003cstrong\u003estreetNumber:\u003c/strong\u003e Use this to transmit the street number of the user. (String)",
         "newRowButtonText": "Add predefined User category"
       },
       {
@@ -1880,7 +1892,7 @@ const runMapp = () => {
              ['useParamsForDefaultPageName', 'parameterObfuscation'].forEach(k => {
                c[k] = c[k] ? c[k].split(',') : [];
              });
-             [['userIdentification', 'suppressParameter'], ['sendViaServer', 'blacklist']].forEach((d) => { 
+             [['userIdentification', 'suppressParameter'], ['sendViaServer', 'blacklist']].forEach((d) => {
                c[d[0]][d[1]] = c[d[0]][d[1]] ? c[d[0]][d[1]].split(',') : [];
              });
              // advanced pixel call
@@ -1928,7 +1940,7 @@ const runMapp = () => {
             const valids = ['view', 'basket', 'confirmation', 'list', 'addToCart', 'deleteFromCart', 'checkout', 'addToWishlist', 'deleteFromWishlist', 'clickRepo', 'displayRepo'];
             if(valids.indexOf(status) !== -1) {
                 log('Calling ' + method + ': ', [product]);
-                callInWindow(method, [product]);         
+                callInWindow(method, [product]);
             }
         });
     }
@@ -2005,7 +2017,7 @@ const onSuccess = () => {
 const onFailure = () => {
     log('Could not load Smartpixel from CDN!');
     data.gtmOnFailure();
-  
+
 };
 
 if(data.loadSmartPixelFromCDN) {
